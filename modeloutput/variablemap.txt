@@ -1,0 +1,430 @@
+Variable	Variable2
+Capacity|Electricity|Biomass	Cap_Ele_Bio
+Capacity|Electricity|Coal	Cap_Ele_Coa
+Capacity|Electricity|Gas	Cap_Ele_Gas
+Capacity|Electricity|Geothermal	Cap_Ele_Geo
+Capacity|Electricity|Hydro	Cap_Ele_Hyd
+Capacity|Electricity|Nuclear	Cap_Ele_Nuc
+Capacity|Electricity|Solar	Cap_Ele_Solar
+Capacity|Electricity|Solar|PV	Cap_Ele_SolarPV
+Capacity|Electricity|Wind	Cap_Ele_Win
+Capacity|Electricity|Wind|Onshore	Cap_Ele_Win_Ons
+Carbon Sequestration|CCS	Car_Seq_CCS
+Carbon Sequestration|CCS|Biomass	Car_Seq_CCS_Bio
+Carbon Sequestration|CCS|Biomass|Energy|Supply	Car_Seq_CCS_Bio_Ene_Sup
+Carbon Sequestration|CCS|Biomass|Energy|Supply|Electricity	Car_Seq_CCS_Bio_Ene_Sup_Ele
+Carbon Sequestration|CCS|Biomass|Energy|Supply|Liquids	Car_Seq_CCS_Bio_Ene_Sup_Liq
+Carbon Sequestration|CCS|Fossil	Car_Seq_CCS_Fos
+Carbon Sequestration|CCS|Fossil|Energy|Demand|Industry	Car_Seq_CCS_Fos_Ene_Dem_Ind
+Carbon Sequestration|CCS|Fossil|Energy|Supply	Car_Seq_CCS_Fos_Ene_Sup
+Carbon Sequestration|CCS|Fossil|Energy|Supply|Electricity	Car_Seq_CCS_Fos_Ene_Sup_Ele
+Carbon Sequestration|CCS|Fossil|Energy|Supply|Liquids	Car_Seq_CCS_Fos_Ene_Sup_Liq
+Carbon Sequestration|Land Use	Car_Seq_Lan_Use
+Consumption	CNS
+Emissions|BC	Emi_BC
+Emissions|CH4	Emi_CH4
+Emissions|CH4|AFOLU	Emi_CH4_AFO
+Emissions|CH4|Energy|Demand|Industry	Emi_CH4_Ene_Dem_Ind
+Emissions|CH4|Energy|Demand|Transportation	Emi_CH4_Ene_Dem_Tra
+Emissions|CH4|Energy|Supply	Emi_CH4_Ene_Sup
+Emissions|CO	Emi_CO
+Emissions|CO2	Emi_CO2
+Emissions|CO2|AFOLU	Emi_CO2_AFO
+Emissions|CO2|Energy and Industrial Processes	Emi_CO2_Ene_and_Ind_Pro
+Emissions|CO2|Energy|Demand	Emi_CO2_Ene_Dem
+Emissions|CO2|Energy|Demand|AFOFI	Emi_CO2_Ene_Dem_AFO
+Emissions|CO2|Energy|Demand|Industry	Emi_CO2_Ene_Dem_Ind
+Emissions|CO2|Energy|Demand|Transportation	Emi_CO2_Ene_Dem_Tra
+Emissions|CO2|Energy|Supply	Emi_CO2_Ene_Sup
+Emissions|CO2|Other	Emi_CO2_Oth
+Emissions|F-Gases	Emi_F_G
+Emissions|HFC	Emissions_HFC
+Emissions|N2O	Emi_N2O
+Emissions|N2O|AFOLU	Emi_N2O_AFO
+Emissions|NH3	Emi_NH3
+Emissions|NOx	Emi_NOx
+Emissions|OC	Emi_OC
+Emissions|SF6	Emi_SF6
+Emissions|Sulfur	Emi_Sul
+Emissions|VOC	Emi_VOC
+Final Energy	Fin_Ene
+Final Energy|Electricity	Fin_Ene_Ele
+Final Energy|Gases	Fin_Ene_Gas
+Final Energy|Heat	Fin_Ene_Heat
+Final Energy|Industry|Electricity	Fin_Ene_Ind_Ele
+Final Energy|Industry|Gases	Fin_Ene_Ind_Gas
+Final Energy|Industry|Heat	Fin_Ene_Ind_Heat
+Final Energy|Industry|Liquids	Fin_Ene_Ind_Liq
+Final Energy|Industry|Solids	Fin_Ene_Ind_Solids
+Final Energy|Liquids	Fin_Ene_Liq
+Final Energy|Residential and Commercial	Fin_Ene_Res_and_Com
+Final Energy|Residential and Commercial|Heat	Fin_Ene_Res_and_Com_Heat
+Final Energy|Solids	Fin_Ene_Solids
+Final Energy|Solids|Biomass	Fin_Ene_SolidsBio
+Final Energy|Solids|Coal	Fin_Ene_SolidsCoa
+Final Energy|Transportation	Fin_Ene_Tra
+Final Energy|Transportation|Electricity	Fin_Ene_Tra_Ele
+Final Energy|Transportation|Liquids|Biomass	Fin_Ene_Tra_Liq_Bio
+Final Energy|Transportation|Liquids|Oil	Fin_Ene_Tra_Liq_Oil
+GDP|MER	GDP_MER
+GDP|PPP	GDP_PPP
+Investment|Energy Supply	Inv_Ene_Sup
+Investment|Energy Supply|Electricity	Inv_Ene_Sup_Ele
+Investment|Energy Supply|Electricity|Fossil	Inv_Ene_Sup_Ele_Fos
+Investment|Energy Supply|Electricity|Non-fossil	Inv_Ene_Sup_Ele_Non
+Investment|Energy Supply|Extraction|Fossil	Inv_Ene_Sup_Ext_Fos
+Land Cover	Lan_Cov
+Land Cover|Cropland	Lan_Cov_Cro
+Land Cover|Cropland|Energy Crops	Lan_Cov_Cro_Ene_Cro
+Land Cover|Forest	Lan_Cov_Frs
+Land Cover|Other Arable Land	Lan_Cov_Oth_Ara_Lan
+Land Cover|Pasture	Lan_Cov_Pst
+Policy Cost|Consumption Loss	Pol_Cos_Cns_Los
+Policy Cost|GDP Loss	Pol_Cos_GDP_Los
+Population	POP
+Price|Carbon	Prc_Car
+Price|Primary Energy|Coal	Prc_Prm_Ene_Coa
+Price|Primary Energy|Gas	Prc_Prm_Ene_Gas
+Price|Primary Energy|Oil	Prc_Prm_Ene_Oil
+Price|Secondary Energy|Electricity	Prc_Sec_Ene_Ele
+Primary Energy	Prm_Ene
+Primary Energy|Biomass	Prm_Ene_Bio
+Primary Energy|Coal	Prm_Ene_Coa
+Primary Energy|Coal|w/ CCS	Prm_Ene_Coa_w_CCS
+Primary Energy|Coal|w/o CCS	Prm_Ene_Coa_wo_CCS
+Primary Energy|Fossil	Prm_Ene_Fos
+Primary Energy|Fossil|w/ CCS	Prm_Ene_Fos_w_CCS
+Primary Energy|Fossil|w/o CCS	Prm_Ene_Fos_wo_CCS
+Primary Energy|Gas	Prm_Ene_Gas
+Primary Energy|Gas|w/ CCS	Prm_Ene_Gas_w_CCS
+Primary Energy|Gas|w/o CCS	Prm_Ene_Gas_wo_CCS
+Primary Energy|Non-Biomass Renewables	Prm_Ene_NonBioRen
+Primary Energy|Nuclear	Prm_Ene_Nuc
+Primary Energy|Oil	Prm_Ene_Oil
+Primary Energy|Oil|w/ CCS	Prm_Ene_Oil_w_CCS
+Primary Energy|Oil|w/o CCS	Prm_Ene_Oil_wo_CCS
+Primary Energy|Secondary Energy Trade	Prm_Ene_Sec_Ene_Trd
+Secondary Energy|Electricity	Sec_Ene_Ele
+Secondary Energy|Electricity|Biomass	Sec_Ene_Ele_Bio
+Secondary Energy|Electricity|Biomass|w/ CCS	Sec_Ene_Ele_Bio_w_CCS
+Secondary Energy|Electricity|Biomass|w/o CCS	Sec_Ene_Ele_Bio_wo_CCS
+Secondary Energy|Electricity|Coal	Sec_Ene_Ele_Coa
+Secondary Energy|Electricity|Coal|w/ CCS	Sec_Ene_Ele_Coa_w_CCS
+Secondary Energy|Electricity|Coal|w/o CCS	Sec_Ene_Ele_Coa_wo_CCS
+Secondary Energy|Electricity|Gas	Sec_Ene_Ele_Gas
+Secondary Energy|Electricity|Gas|w/ CCS	Sec_Ene_Ele_Gas_w_CCS
+Secondary Energy|Electricity|Gas|w/o CCS	Sec_Ene_Ele_Gas_wo_CCS
+Secondary Energy|Electricity|Geothermal	Sec_Ene_Ele_Geo
+Secondary Energy|Electricity|Hydro	Sec_Ene_Ele_Hyd
+Secondary Energy|Electricity|Non-Biomass Renewables	Sec_Ene_Ele_NonBioRen
+Secondary Energy|Electricity|Nuclear	Sec_Ene_Ele_Nuc
+Secondary Energy|Electricity|Oil	Sec_Ene_Ele_Oil
+Secondary Energy|Electricity|Oil|w/ CCS	Sec_Ene_Ele_Oil_w_CCS
+Secondary Energy|Electricity|Oil|w/o CCS	Sec_Ene_Ele_Oil_wo_CCS
+Secondary Energy|Electricity|Solar	Sec_Ene_Ele_Solar
+Secondary Energy|Electricity|Wind	Sec_Ene_Ele_Win
+Secondary Energy|Electricity|Wind|Onshore	Sec_Ene_Ele_Win_Ons
+Secondary Energy|Gases	Sec_Ene_Gas
+Secondary Energy|Gases|Natural Gas	Sec_Ene_Gas_Nat_Gas
+Secondary Energy|Heat	Sec_Ene_Heat
+Secondary Energy|Liquids	Sec_Ene_Liq
+Secondary Energy|Liquids|Biomass	Sec_Ene_Liq_Bio
+Secondary Energy|Liquids|Oil	Sec_Ene_Liq_Oil
+Primary Energy|Other	Prm_Ene_Oth
+Concentration|CH4	Cnc_CH4
+Concentration|CO2	Cnc_CO2
+Concentration|N2O	Cnc_N2O
+Emissions|HFC|HFC125	Emissions_HFC_HFC125
+Emissions|HFC|HFC134a	Emissions_HFC_HFC134a
+Emissions|HFC|HFC143a	Emissions_HFC_HFC143a
+Emissions|HFC|HFC227ea	Emissions_HFC_HFC227ea
+Emissions|HFC|HFC23	Emissions_HFC_HFC23
+Emissions|HFC|HFC32	Emissions_HFC_HFC32
+Emissions|HFC|HFC43-10	Emissions_HFC_HFC43_10
+Emissions|PFC	Emi_PFC
+Forcing	Frc
+Forcing|Aerosol	Frc_Aer
+Forcing|CH4	Frc_CH4
+Forcing|CO2	Frc_CO2
+Forcing|F-Gases	Frc_F_G
+Forcing|Kyoto Gases	Frc_Kyo_Gas
+Forcing|N2O	Frc_N2O
+Forcing|Tropospheric Ozone	Frc_Tro_Ozo
+Temperature|Global Mean	Tem_Glo_Mea
+Agricultural Demand	Agr_Dem
+Agricultural Demand|Crops|Feed	Agr_Dem_Cro_Fee
+Agricultural Demand|Crops|Food	Agr_Dem_Cro_Foo
+Agricultural Demand|Crops|Other	Agr_Dem_Cro_Oth
+Agricultural Demand|Livestock|Food	Agr_Dem_Liv_Foo
+Agricultural Demand|Livestock|Other	Agr_Dem_Liv_Oth
+Agricultural Production	Agr_Pro
+Capacity|Electricity	Cap_Ele
+Capacity|Electricity|Oil	Cap_Ele_Oil
+Cumulative Capacity|Electricity|Biomass	Cum_Cap_Ele_Bio
+Cumulative Capacity|Electricity|Biomass|w/ CCS	Cum_Cap_Ele_Bio_w_CCS
+Cumulative Capacity|Electricity|Coal	Cum_Cap_Ele_Coa
+Cumulative Capacity|Electricity|Coal|w/ CCS	Cum_Cap_Ele_Coa_w_CCS
+Cumulative Capacity|Electricity|Coal|w/o CCS	Cum_Cap_Ele_Coa_wo_CCS
+Cumulative Capacity|Electricity|Gas	Cum_Cap_Ele_Gas
+Cumulative Capacity|Electricity|Gas|w/ CCS	Cum_Cap_Ele_Gas_w_CCS
+Cumulative Capacity|Electricity|Gas|w/o CCS	Cum_Cap_Ele_Gas_wo_CCS
+Cumulative Capacity|Electricity|Nuclear	Cum_Cap_Ele_Nuc
+Cumulative Capacity|Electricity|Oil	Cum_Cap_Ele_Oil
+Cumulative Capacity|Electricity|Solar	Cum_Cap_Ele_Solar
+Cumulative Capacity|Electricity|Solar|PV	Cum_Cap_Ele_SolarPV
+Emissions|BC|AFOLU	Emi_BC_AFO
+Emissions|BC|Energy	Emi_BC_Ene
+Emissions|BC|Energy|Demand|Industry	Emi_BC_Ene_Dem_Ind
+Emissions|BC|Energy|Demand|Transportation	Emi_BC_Ene_Dem_Tra
+Emissions|BC|Energy|Supply	Emi_BC_Ene_Sup
+Emissions|CH4|Energy	Emi_CH4_Ene
+Emissions|CO2|Energy	Emi_CO2_Ene
+Emissions|CO2|Energy|Supply|Other Sector	Emi_CO2_Ene_Sup_Oth_Sec
+Emissions|CO2|Industrial Processes	Emi_CO2_Ind_Pro
+Emissions|CO|AFOLU	Emi_CO_AFO
+Emissions|CO|Energy	Emi_CO_Ene
+Emissions|CO|Energy|Demand|Industry	Emi_CO_Ene_Dem_Ind
+Emissions|CO|Energy|Demand|Transportation	Emi_CO_Ene_Dem_Tra
+Emissions|CO|Energy|Supply	Emi_CO_Ene_Sup
+Emissions|Kyoto Gases	Emi_Kyo_Gas
+Emissions|N2O|Energy	Emi_N2O_Ene
+Emissions|N2O|Other	Emi_N2O_Oth
+Emissions|NH3|AFOLU	Emi_NH3_AFO
+Emissions|NH3|Energy	Emi_NH3_Ene
+Emissions|NH3|Energy|Demand|Industry	Emi_NH3_Ene_Dem_Ind
+Emissions|NH3|Energy|Demand|Transportation	Emi_NH3_Ene_Dem_Tra
+Emissions|NH3|Energy|Supply	Emi_NH3_Ene_Sup
+Emissions|NOx|AFOLU	Emi_NOx_AFO
+Emissions|NOx|Energy	Emi_NOx_Ene
+Emissions|NOx|Energy|Demand|Industry	Emi_NOx_Ene_Dem_Ind
+Emissions|NOx|Energy|Demand|Transportation	Emi_NOx_Ene_Dem_Tra
+Emissions|NOx|Energy|Supply	Emi_NOx_Ene_Sup
+Emissions|OC|AFOLU	Emi_OC_AFO
+Emissions|OC|Energy	Emi_OC_Ene
+Emissions|OC|Energy|Demand|Industry	Emi_OC_Ene_Dem_Ind
+Emissions|OC|Energy|Demand|Transportation	Emi_OC_Ene_Dem_Tra
+Emissions|OC|Energy|Supply	Emi_OC_Ene_Sup
+Emissions|Sulfur|AFOLU	Emi_Sul_AFO
+Emissions|Sulfur|Energy	Emi_Sul_Ene
+Emissions|Sulfur|Energy|Demand|Industry	Emi_Sul_Ene_Dem_Ind
+Emissions|Sulfur|Energy|Demand|Transportation	Emi_Sul_Ene_Dem_Tra
+Emissions|Sulfur|Energy|Supply	Emi_Sul_Ene_Sup
+Emissions|VOC|AFOLU	Emi_VOC_AFO
+Emissions|VOC|Energy	Emi_VOC_Ene
+Emissions|VOC|Energy|Demand|Industry	Emi_VOC_Ene_Dem_Ind
+Emissions|VOC|Energy|Demand|Transportation	Emi_VOC_Ene_Dem_Tra
+Emissions|VOC|Energy|Supply	Emi_VOC_Ene_Sup
+Final Energy|Industry	Fin_Ene_Ind
+Final Energy|Industry|Solids|Biomass	Fin_Ene_Ind_SolidsBio
+Final Energy|Industry|Solids|Coal	Fin_Ene_Ind_SolidsCoa
+Final Energy|Residential and Commercial|Electricity	Fin_Ene_Res_and_Com_Ele
+Final Energy|Residential and Commercial|Gases	Fin_Ene_Res_and_Com_Gas
+Final Energy|Residential and Commercial|Liquids	Fin_Ene_Res_and_Com_Liq
+Final Energy|Residential and Commercial|Solids	Fin_Ene_Res_and_Com_Solids
+Final Energy|Residential and Commercial|Solids|Biomass	Fin_Ene_Res_and_Com_SolidsBio
+Final Energy|Residential and Commercial|Solids|Coal	Fin_Ene_Res_and_Com_SolidsCoa
+Final Energy|Transportation|Gases	Fin_Ene_Tra_Gas
+Final Energy|Transportation|Liquids	Fin_Ene_Tra_Liq
+Food Energy Supply	Foo_Ene_Sup
+Investment|Energy Supply|CO2 Transport and Storage	Inv_Ene_Sup_CO2_Tra_and_Sto
+Investment|Energy Supply|Electricity|Transmission and Distribution	Inv_Ene_Sup_Ele_Tra_and_Dis
+Investment|Energy Supply|Heat	Inv_Ene_Sup_Heat
+Investment|Energy Supply|Liquids	Inv_Ene_Sup_Liq
+Land Cover|Built-up Area	Lan_Cov_Bui_Are
+Land Cover|Cropland|Cereals	Lan_Cov_Cro_Cer
+Land Cover|Forest|Natural Forest	Lan_Cov_Frs_Nat_Frs
+Land Cover|Other Land	Lan_Cov_Oth_Lan
+Price|Agriculture|Non-Energy Crops and Livestock|Index	Prc_Agr_NonEneCro_and_Liv_Ind
+Price|Agriculture|Non-Energy Crops|Index	Prc_Agr_NonEneCro_Ind
+Price|Secondary Energy|Liquids|Biomass	Prc_Sec_Ene_Liq_Bio
+Trade|Primary Energy|Coal|Volume	Trd_Prm_Ene_Coa_Vol
+Trade|Primary Energy|Gas|Volume	Trd_Prm_Ene_Gas_Vol
+Trade|Primary Energy|Oil|Volume	Trd_Prm_Ene_Oil_Vol
+Investment|Energy Supply|Electricity|Other	Inv_Ene_Sup_Ele_Oth
+Secondary Energy|Heat|Geothermal	Sec_Ene_Heat_Geo
+Forcing|Aerosol|BC	Frc_Aer_BC
+Forcing|Aerosol|OC	Frc_Aer_OC
+Forcing|Aerosol|Other	Frc_Aer_Oth
+Forcing|Aerosol|Sulfate Direct	Frc_Aer_Sul_Dir
+Forcing|Other	Frc_Oth
+Agricultural Production|Energy|Crops	Agr_Pro_Ene_Cro
+Agricultural Production|Non-Energy|Crops	Agr_Pro_NonEneCro
+Agricultural Production|Non-Energy|Livestock	Agr_Pro_NonEneLiv
+Food Demand	Foo_Dem
+Food Demand|Crops	Foo_Dem_Cro
+Food Demand|Livestock	Foo_Dem_Liv
+Land Cover|Other Natural Land	Lan_Cov_Oth_Nat_Lan
+Primary Energy|Geothermal	Prm_Ene_Geo
+Primary Energy|Hydro	Prm_Ene_Hyd
+Primary Energy|Solar	Prm_Ene_Solar
+Primary Energy|Wind	Prm_Ene_Win
+Carbon Sequestration|Land Use|Afforestation	Car_Seq_Lan_Use_Aff
+Emissions|CO2|Energy|Supply|Electricity	Emi_CO2_Ene_Sup_Ele
+Final Energy|Geothermal	Fin_Ene_Geo
+Final Energy|Hydrogen	Fin_Ene_Hyd
+Final Energy|Solar	Fin_Ene_Solar
+Investment|Energy Efficiency	Inv_Ene_Eff
+Investment|Energy Supply|Electricity|Biomass|w/ CCS	Inv_Ene_Sup_Ele_Bio_w_CCS
+Investment|Energy Supply|Electricity|Biomass|w/o CCS	Inv_Ene_Sup_Ele_Bio_wo_CCS
+Investment|Energy Supply|Electricity|Coal|w/ CCS	Inv_Ene_Sup_Ele_Coa_w_CCS
+Investment|Energy Supply|Electricity|Coal|w/o CCS	Inv_Ene_Sup_Ele_Coa_wo_CCS
+Investment|Energy Supply|Electricity|Gas|w/ CCS	Inv_Ene_Sup_Ele_Gas_w_CCS
+Investment|Energy Supply|Electricity|Gas|w/o CCS	Inv_Ene_Sup_Ele_Gas_wo_CCS
+Investment|Energy Supply|Electricity|Geothermal	Inv_Ene_Sup_Ele_Geo
+Investment|Energy Supply|Electricity|Hydro	Inv_Ene_Sup_Ele_Hyd
+Investment|Energy Supply|Electricity|Non-Biomass Renewables	Inv_Ene_Sup_Ele_NonBioRen
+Investment|Energy Supply|Electricity|Nuclear	Inv_Ene_Sup_Ele_Nuc
+Investment|Energy Supply|Electricity|Oil|w/o CCS	Inv_Ene_Sup_Ele_Oil_wo_CCS
+Investment|Energy Supply|Electricity|Solar	Inv_Ene_Sup_Ele_Solar
+Investment|Energy Supply|Electricity|Wind	Inv_Ene_Sup_Ele_Win
+Investment|Energy Supply|Hydrogen|Fossil	Inv_Ene_Sup_Hyd_Fos
+Investment|Energy Supply|Hydrogen|Other	Inv_Ene_Sup_Hyd_Oth
+Final Energy|Solids|Biomass|Traditional	Fin_Ene_SolidsBio_Tra
+Final Energy|Transportation|Freight	Fin_Ene_Tra_Fre
+Primary Energy|Biomass|Electricity	Prm_Ene_Bio_Ele
+Primary Energy|Biomass|Electricity|w/o CCS	Prm_Ene_Bio_Ele_wo_CCS
+Primary Energy|Biomass|Modern	Prm_Ene_Bio_Mod
+Secondary Energy|Liquids|Biomass|w/o CCS	Sec_Ene_Liq_Bio_wo_CCS
+Secondary Energy|Solids	Sec_Ene_Solids
+Primary Energy|Biomass|Electricity|w/ CCS	Prm_Ene_Bio_Ele_w_CCS
+Secondary Energy|Liquids|Biomass|w/ CCS	Sec_Ene_Liq_Bio_w_CCS
+Capacity|Electricity|Other	Cap_Ele_Oth
+Cumulative Capacity|Electricity|Biomass|w/o CCS	Cum_Cap_Ele_Bio_wo_CCS
+Cumulative Capacity|Electricity|Geothermal	Cum_Cap_Ele_Geo
+Cumulative Capacity|Electricity|Hydro	Cum_Cap_Ele_Hyd
+Cumulative Capacity|Electricity|Wind|Onshore	Cum_Cap_Ele_Win_Ons
+Emissions|HFC|HFC245fa	Emissions_HFC_HFC245fa
+Final Energy|Non-Energy Use	Fin_Ene_NonEneUse
+Final Energy|Non-Energy Use|Oil	Fin_Ene_NonEneUse_Oil
+Food Energy Supply|Livestock	Foo_Ene_Sup_Liv
+Investment|Energy Supply|Electricity|Biomass	Inv_Ene_Sup_Ele_Bio
+Investment|Energy Supply|Electricity|Coal	Inv_Ene_Sup_Ele_Coa
+Investment|Energy Supply|Electricity|Electricity Storage	Inv_Ene_Sup_Ele_Ele_Sto
+Investment|Energy Supply|Electricity|Gas	Inv_Ene_Sup_Ele_Gas
+Investment|Energy Supply|Electricity|Oil	Inv_Ene_Sup_Ele_Oil
+Investment|Energy Supply|Electricity|Oil|w/ CCS	Inv_Ene_Sup_Ele_Oil_w_CCS
+Investment|Energy Supply|Extraction|Coal	Inv_Ene_Sup_Ext_Coa
+Investment|Energy Supply|Extraction|Gas	Inv_Ene_Sup_Ext_Gas
+Investment|Energy Supply|Extraction|Oil	Inv_Ene_Sup_Ext_Oil
+Investment|Energy Supply|Liquids|Biomass	Inv_Ene_Sup_Liq_Bio
+Investment|Energy Supply|Liquids|Oil	Inv_Ene_Sup_Liq_Oil
+Population|Risk of Hunger	Pop_Ris_of_Hun
+Price|Agriculture|Corn|Index	Prc_Agr_Cor_Ind
+Price|Agriculture|Soybean|Index	Prc_Agr_Soy_Ind
+Price|Agriculture|Wheat|Index	Prc_Agr_Whe_Ind
+Price|Final Energy|Residential|Electricity	Prc_Fin_Ene_Res_Ele
+Price|Final Energy|Residential|Gases|Natural Gas	Prc_Fin_Ene_Res_Gas_Nat_Gas
+Price|Final Energy|Residential|Liquids|Biomass	Prc_Fin_Ene_Res_Liq_Bio
+Price|Final Energy|Residential|Liquids|Oil	Prc_Fin_Ene_Res_Liq_Oil
+Price|Final Energy|Residential|Solids|Coal	Prc_Fin_Ene_Res_SolidsCoa
+Price|Secondary Energy|Liquids	Prc_Sec_Ene_Liq
+Primary Energy|Biomass|Traditional	Prm_Ene_Bio_Tra
+Primary Energy|Coal|Electricity	Prm_Ene_Coa_Ele
+Primary Energy|Coal|Electricity|w/ CCS	Prm_Ene_Coa_Ele_w_CCS
+Primary Energy|Coal|Electricity|w/o CCS	Prm_Ene_Coa_Ele_wo_CCS
+Primary Energy|Gas|Electricity	Prm_Ene_Gas_Ele
+Primary Energy|Gas|Electricity|w/ CCS	Prm_Ene_Gas_Ele_w_CCS
+Primary Energy|Gas|Electricity|w/o CCS	Prm_Ene_Gas_Ele_wo_CCS
+Secondary Energy|Electricity|Solar|PV	Sec_Ene_Ele_SolarPV
+Trade|Primary Energy|Biomass|Volume	Trd_Prm_Ene_Bio_Vol
+Trade|Secondary Energy|Electricity|Volume	Trd_Sec_Ene_Ele_Vol
+Trade|Secondary Energy|Liquids|Biomass|Volume	Trd_Sec_Ene_Liq_Bio_Vol
+Final Energy|Non-Energy Use|Gas	Fin_Ene_NonEneUse_Gas
+Forcing|Aerosol|Black and Organic Carbon	Frc_Aer_Bla_and_Org_Car
+Forcing|Aerosol|Cloud Indirect	Frc_Aer_Clo_Ind
+Carbon Sequestration|Direct Air Capture	Car_Seq_Dir_Air_Cap
+Carbon Sequestration|Enhanced Weathering	Car_Seq_Enh_Wea
+Carbon Sequestration|Land Use|Biochar	Car_Seq_Lan_Use_Bio
+Carbon Sequestration|Land Use|Soil Carbon Management	Car_Seq_Lan_Use_Soi_Car_Man
+Forcing|Montreal Gases	Frc_Mon_Gas
+Final Energy|Transportation|Hydrogen	Fin_Ene_Tra_Hyd
+Secondary Energy|Gases|Biomass	Sec_Ene_Gas_Bio
+Secondary Energy|Gases|Coal	Sec_Ene_Gas_Coa
+Secondary Energy|Hydrogen	Sec_Ene_Hyd
+Secondary Energy|Hydrogen|Biomass	Sec_Ene_Hyd_Bio
+Secondary Energy|Hydrogen|Biomass|w/ CCS	Sec_Ene_Hyd_Bio_w_CCS
+Secondary Energy|Hydrogen|Biomass|w/o CCS	Sec_Ene_Hyd_Bio_wo_CCS
+Secondary Energy|Hydrogen|Electricity	Sec_Ene_Hyd_Ele
+Secondary Energy|Liquids|Coal	Sec_Ene_Liq_Coa
+Secondary Energy|Liquids|Coal|w/ CCS	Sec_Ene_Liq_Coa_w_CCS
+Secondary Energy|Liquids|Coal|w/o CCS	Sec_Ene_Liq_Coa_wo_CCS
+Secondary Energy|Liquids|Gas	Sec_Ene_Liq_Gas
+Secondary Energy|Liquids|Gas|w/ CCS	Sec_Ene_Liq_Gas_w_CCS
+Secondary Energy|Liquids|Gas|w/o CCS	Sec_Ene_Liq_Gas_wo_CCS
+Capacity|Electricity|Ocean	Cap_Ele_Oce
+Capacity|Electricity|Solar|CSP	Cap_Ele_SolarCSP
+Capacity|Electricity|Wind|Offshore	Cap_Ele_Win_Off
+Cumulative Capacity|Electricity|Solar|CSP	Cum_Cap_Ele_SolarCSP
+Cumulative Capacity|Electricity|Wind	Cum_Cap_Ele_Win
+Cumulative Capacity|Electricity|Wind|Offshore	Cum_Cap_Ele_Win_Off
+Energy Service|Transportation|Freight	Ene_Ser_Tra_Fre
+Energy Service|Transportation|Freight|Navigation	Ene_Ser_Tra_Fre_Nav
+Energy Service|Transportation|Freight|Railways	Ene_Ser_Tra_Fre_Rai
+Energy Service|Transportation|Freight|Road	Ene_Ser_Tra_Fre_Roa
+Energy Service|Transportation|Passenger	Ene_Ser_Tra_Pss
+Energy Service|Transportation|Passenger|Aviation	Ene_Ser_Tra_Pss_Avi
+Energy Service|Transportation|Passenger|Railways	Ene_Ser_Tra_Pss_Rai
+Energy Service|Transportation|Passenger|Road	Ene_Ser_Tra_Pss_Roa
+Primary Energy|Ocean	Prm_Ene_Oce
+Secondary Energy|Electricity|Ocean	Sec_Ene_Ele_Oce
+Secondary Energy|Electricity|Solar|CSP	Sec_Ene_Ele_SolarCSP
+Secondary Energy|Electricity|Wind|Offshore	Sec_Ene_Ele_Win_Off
+Final Energy|Industry|Hydrogen	Fin_Ene_Ind_Hyd
+Final Energy|Industry|Other	Fin_Ene_Ind_Oth
+Final Energy|Non-Energy Use|Biomass	Fin_Ene_NonEneUse_Bio
+Final Energy|Non-Energy Use|Coal	Fin_Ene_NonEneUse_Coa
+Final Energy|Residential and Commercial|Hydrogen	Fin_Ene_Res_and_Com_Hyd
+Final Energy|Residential and Commercial|Other	Fin_Ene_Res_and_Com_Oth
+Population|Rural	Pop_Rur
+Population|Urban	Pop_Urb
+Carbon Sequestration|CCS|Biomass|Energy|Demand|Industry	Car_Seq_CCS_Bio_Ene_Dem_Ind
+Emissions|CO2|Energy|Demand|Other Sector	Emi_CO2_Ene_Dem_Oth_Sec
+Emissions|CO2|Energy|Supply|Heat	Emi_CO2_Ene_Sup_Heat
+Emissions|CO2|Energy|Supply|Liquids	Emi_CO2_Ene_Sup_Liq
+Investment|Energy Supply|Electricity|Ocean	Inv_Ene_Sup_Ele_Oce
+Investment|Energy Supply|Liquids|Coal and Gas	Inv_Ene_Sup_Liq_Coa_and_Gas
+Emissions|CH4|Other	Emi_CH4_Oth
+Carbon Sequestration|CCS|Biomass|Energy|Supply|Hydrogen	Car_Seq_CCS_Bio_Ene_Sup_Hyd
+Carbon Sequestration|CCS|Biomass|Energy|Supply|Other	Car_Seq_CCS_Bio_Ene_Sup_Oth
+Carbon Sequestration|CCS|Fossil|Energy|Supply|Gases	Car_Seq_CCS_Fos_Ene_Sup_Gas
+Carbon Sequestration|CCS|Fossil|Energy|Supply|Hydrogen	Car_Seq_CCS_Fos_Ene_Sup_Hyd
+Carbon Sequestration|CCS|Fossil|Energy|Supply|Other	Car_Seq_CCS_Fos_Ene_Sup_Oth
+Emissions|CO2|Energy|Supply|Gases	Emi_CO2_Ene_Sup_Gas
+Emissions|CO2|Energy|Supply|Solids	Emi_CO2_Ene_Sup_Solids
+Land Cover|Forest|Managed	Lan_Cov_Frs_Man
+Policy Cost|Area under MAC Curve	Pol_Cos_Are_und_MAC_Cur
+Value Added|Commercial	Val_Add_Com
+Value Added|Industry	Val_Add_ind
+Forcing|Albedo Change and Mineral Dust	Frc_Alb_Cha_and_Min_Dus
+Agricultural Production|Energy|Residues	Agr_Pro_Ene_Rsd
+Agricultural Production|Non-Energy	Agr_Pro_NonEne
+Energy Service|Transportation|Freight|Aviation	Ene_Ser_Tra_Fre_Avi
+Investment|Energy Supply|Hydrogen	Inv_Ene_Sup_Hyd
+Land Cover|Cropland|Irrigated	Lan_Cov_Cro_Irr
+Land Cover|Forest|Afforestation and Reforestation	Lan_Cov_Frs_Aff_and_Ref
+Price|Final Energy|Residential|Solids|Biomass	Prc_Fin_Ene_Res_SolidsBio
+Price|Secondary Energy|Gases|Natural Gas	Prc_Sec_Ene_Gas_Nat_Gas
+Price|Secondary Energy|Hydrogen	Prc_Sec_Ene_Hyd
+Price|Secondary Energy|Liquids|Oil	Prc_Sec_Ene_Liq_Oil
+Price|Secondary Energy|Solids|Biomass	Prc_Sec_Ene_SolidsBio
+Price|Secondary Energy|Solids|Coal	Prc_Sec_Ene_SolidsCoa
+Secondary Energy|Hydrogen|Fossil	Sec_Ene_Hyd_Fos
+Secondary Energy|Hydrogen|Fossil|w/ CCS	Sec_Ene_Hyd_Fos_w_CCS
+Secondary Energy|Hydrogen|Fossil|w/o CCS	Sec_Ene_Hyd_Fos_wo_CCS
+Trade|Secondary Energy|Hydrogen|Volume	Trd_Sec_Ene_Hyd_Vol
+Price|Primary Energy|Biomass	Prc_Prm_Ene_Bio
+Agricultural Production|Energy	Agr_Pro_Ene
+Water Withdrawal|Irrigation	Wat_Wit_Irr
+Carbon Sequestration|CCS|Biomass|Energy|Supply|Gases	Car_Seq_CCS_Bio_Ene_Sup_Gas
+Policy Cost|Other	Pol_Cos_Oth
+Emissions|BC|Other	Emi_BC_Oth
+Emissions|NH3|Other	Emi_NH3_Oth
+Emissions|NOx|Other	Emi_NOx_Oth
+Emissions|OC|Other	Emi_OC_Oth
+Emissions|Sulfur|Other	Emi_Sul_Oth
+Emissions|VOC|Other	Emi_VOC_Oth
+Subsidies|Energy|Fossil	Sub_Ene_Fos
+Emissions|CO|Other	Emi_CO_Oth
+Secondary Energy|Electricity|Fossil	Sec_Ene_Ele_Fos
+Secondary Energy|Electricity|Other	Sec_Ene_Ele_Oth
+Policy Cost|Additional Total Energy System Cost	Pol_Cos_Add_Tot_Ene_Sys_Cos

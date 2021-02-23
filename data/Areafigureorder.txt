@@ -1,0 +1,81 @@
+Class	Ind	Variable	order
+TPES	Coal|w/o CCS	Prm_Ene_Coa_wo_CCS	1
+TPES	Coal|w/ CCS	Prm_Ene_Coa_w_CCS	2
+TPES	Oil|w/o CCS	Prm_Ene_Oil_wo_CCS	3
+TPES	Oil|w/ CCS	Prm_Ene_Oil_w_CCS	4
+TPES	Gas|w/o CCS	Prm_Ene_Gas_wo_CCS	5
+TPES	Gas|w/ CCS	Prm_Ene_Gas_w_CCS	6
+TPES	Nuclear	Prm_Ene_Nuc	7
+TPES	Hydro	Prm_Ene_Hyd	8
+TPES	Solar	Prm_Ene_Solar	9
+TPES	Wind	Prm_Ene_Win	10
+TPES	Biomass|w/o CCS	Prm_Ene_Bio_wo_CCS	11
+TPES	Biomass|w/ CCS	Prm_Ene_Bio_w_CCS	12
+TPES	Geothermal	Prm_Ene_Geo	13
+Power	Coal|w/o CCS	Sec_Ene_Ele_Coa_wo_CCS	1
+Power	Coal|w/ CCS	Sec_Ene_Ele_Coa_w_CCS	2
+Power	Oil|w/o CCS	Sec_Ene_Ele_Oil_wo_CCS	3
+Power	Oil|w/ CCS	Sec_Ene_Ele_Oil_w_CCS	4
+Power	Gas|w/o CCS	Sec_Ene_Ele_Gas_wo_CCS	5
+Power	Gas|w/ CCS	Sec_Ene_Ele_Gas_w_CCS	6
+Power	Nuclear	Sec_Ene_Ele_Nuc	7
+Power	Hydro	Sec_Ene_Ele_Hyd	8
+Power	Solar	Sec_Ene_Ele_Solar	9
+Power	Wind	Sec_Ene_Ele_Win	10
+Power	Biomass|w/o CCS	Sec_Ene_Ele_Bio_wo_CCS	11
+Power	Biomass|w/ CCS	Sec_Ene_Ele_Bio_w_CCS	12
+Power	Geothermal	Sec_Ene_Ele_Geo	13
+Power_heat	Coal|w/o CCS	Sec_Ene_Ele_Heat_Coa_wo_CCS	1
+Power_heat	Coal|w/ CCS	Sec_Ene_Ele_Heat_Coa_w_CCS	2
+Power_heat	Oil|w/o CCS	Sec_Ene_Ele_Oil_wo_CCS	3
+Power_heat	Oil|w/ CCS	Sec_Ene_Ele_Oil_w_CCS	4
+Power_heat	Gas|w/o CCS	Sec_Ene_Ele_Heat_Gas_wo_CCS	5
+Power_heat	Gas|w/ CCS	Sec_Ene_Ele_Heat_Gas_w_CCS	6
+Power_heat	Nuclear	Sec_Ene_Ele_Heat_Nuc	7
+Power_heat	Hydro	Sec_Ene_Ele_Hyd	8
+Power_heat	Solar	Sec_Ene_Ele_Solar	9
+Power_heat	Wind	Sec_Ene_Ele_Win	10
+Power_heat	Biomass|w/o CCS	Sec_Ene_Ele_Heat_Bio_wo_CCS	11
+Power_heat	Biomass|w/ CCS	Sec_Ene_Ele_Heat_Bio_w_CCS	12
+Power_heat	Geothermal	Sec_Ene_Ele_Heat_Geo	13
+TFC_fuel	Solid	Fin_Ene_Solids	1
+TFC_fuel	Liquid	Fin_Ene_Liq	2
+TFC_fuel	Gas	Fin_Ene_Gas	3
+TFC_fuel	Electricity	Fin_Ene_Ele	4
+TFC_fuel	Heat	Fin_Ene_Heat	5
+TFC_fuel	Hydrogen	Fin_Ene_Hyd	6
+Landuse	Build-up	Lan_Cov_Bui_Are	6
+Landuse	Cropland (for food)	Lan_Cov_Cro_Non_Ene_Cro	1
+Landuse	Forest	Lan_Cov_Frs	2
+Landuse	Pasture	Lan_Cov_Pst	3
+Landuse	Energy Crops	Lan_Cov_Cro_Ene_Cro	4
+Landuse	Other Land	Lan_Cov_Oth_Lan	7
+Landuse	Other Arable Land	Lan_Cov_Oth_Ara_Lan	5
+TFC_Sector	Industry	Fin_Ene_Ind	1
+TFC_Sector	Transport	Fin_Ene_Tra	2
+TFC_Sector	Commercial	Fin_Ene_Com	3
+TFC_Sector	Residential	Fin_Ene_Res	4
+TFC_Ind	Solid	Fin_Ene_ind_Solids	1
+TFC_Ind	Liquid	Fin_Ene_Ind_Liq	2
+TFC_Ind	Gas	Fin_Ene_Ind_Gas	3
+TFC_Ind	Electricity	Fin_Ene_Ind_Ele	4
+TFC_Ind	Heat	Fin_Ene_Ind_Heat	5
+TFC_Ind	Hydrogen	Fin_Ene_Ind_Hyd	6
+TFC_Tra	Solid	Fin_Ene_Tra_Solids	1
+TFC_Tra	Liquid	Fin_Ene_Tra_Liq	2
+TFC_Tra	Gas	Fin_Ene_Tra_Gas	3
+TFC_Tra	Electricity	Fin_Ene_Tra_Ele	4
+TFC_Tra	Heat	Fin_Ene_Tra_Heat	5
+TFC_Tra	Hydrogen	Fin_Ene_Tra_Hyd	6
+TFC_Com	Solid	Fin_Ene_Com_Solids	1
+TFC_Com	Liquid	Fin_Ene_Com_Liq	2
+TFC_Com	Gas	Fin_Ene_Com_Gas	3
+TFC_Com	Electricity	Fin_Ene_Com_Ele	4
+TFC_Com	Heat	Fin_Ene_Com_Heat	5
+TFC_Com	Hydrogen	Fin_Ene_Com_Hyd	6
+TFC_Res	Solid	Fin_Ene_Res_Solids	1
+TFC_Res	Liquid	Fin_Ene_Res_Liq	2
+TFC_Res	Gas	Fin_Ene_Res_Gas	3
+TFC_Res	Electricity	Fin_Ene_Res_Ele	4
+TFC_Res	Heat	Fin_Ene_Res_Heat	5
+TFC_Res	Hydrogen	Fin_Ene_Res_Hyd	6

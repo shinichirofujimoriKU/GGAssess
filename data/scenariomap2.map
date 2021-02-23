@@ -1,0 +1,5 @@
+SCENARIO	Name
+Baseline	Baseline
+Opt_2D	Mitigation
+Baseline_FullTech	BaU
+Mitigation_FullTech	Mit

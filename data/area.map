@@ -1,0 +1,11 @@
+Class	Var	Unit
+TPES	Primary energy	EJ/year
+Power	Power generation	EJ/year
+Power_heat	Power and heat generation	EJ/year
+TFC_fuel	Final energy|Fuel	EJ/year
+Landuse	Land use	Mha
+TFC_Sector	Final Energy|Sectors	EJ/year
+TFC_Ind	Final Energy|Industry	EJ/year
+TFC_Tra	Final Energy|Transport	EJ/year
+TFC_Res	Final Energy|Residential	EJ/year
+TFC_Com	Final Energy|commercial	EJ/year
