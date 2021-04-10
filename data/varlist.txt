@@ -143,3 +143,5 @@ Emi_N2O	1
 Emi_VOC	1
 Emi_NH3	1
 Emi_NOx	1
+Pol_Cos_GDP_Los	1
+Pol_Cos_Cns_Los	1

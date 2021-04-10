@@ -1,0 +1,417 @@
+Scenario	exclude	category
+ADVANCE_2020_1.5C-2100	FALSE	1.5C low overshoot
+ADVANCE_2020_Med2C	FALSE	Higher 2C
+ADVANCE_2020_WB2C	FALSE	Lower 2C
+ADVANCE_2030_Med2C	FALSE	Above 2C
+ADVANCE_2030_Price1.5C	FALSE	Lower 2C
+ADVANCE_2030_WB2C	FALSE	Lower 2C
+ADVANCE_INDC	FALSE	Above 2C
+ADVANCE_NoPolicy	FALSE	Above 2C
+ADVANCE_Reference	FALSE	Above 2C
+SFCM_SSP2_Bio_1p5Degree	FALSE	Lower 2C
+SFCM_SSP2_Bio_2Degree	FALSE	Above 2C
+SFCM_SSP2_Bio_Baseline	FALSE	Above 2C
+SFCM_SSP2_EEEI_1p5Degree	FALSE	Lower 2C
+SFCM_SSP2_EEEI_2Degree	FALSE	Higher 2C
+SFCM_SSP2_EEEI_Baseline	FALSE	Above 2C
+SFCM_SSP2_LifeStyle_1p5Degree	FALSE	Lower 2C
+SFCM_SSP2_LifeStyle_2Degree	FALSE	Higher 2C
+SFCM_SSP2_LifeStyle_Baseline	FALSE	Above 2C
+SFCM_SSP2_Ref_1p5Degree	FALSE	Lower 2C
+SFCM_SSP2_Ref_2Degree	FALSE	Above 2C
+SFCM_SSP2_Ref_Baseline	FALSE	Above 2C
+SFCM_SSP2_ST_CCS_1p5Degree	FALSE	Lower 2C
+SFCM_SSP2_ST_CCS_2Degree	FALSE	Above 2C
+SFCM_SSP2_ST_CCS_Baseline	FALSE	Above 2C
+SFCM_SSP2_ST_bio_1p5Degree	FALSE	Lower 2C
+SFCM_SSP2_ST_bio_2Degree	FALSE	Above 2C
+SFCM_SSP2_ST_bio_Baseline	FALSE	Above 2C
+SFCM_SSP2_ST_nuclear_1p5Degree	FALSE	Lower 2C
+SFCM_SSP2_ST_nuclear_2Degree	FALSE	Higher 2C
+SFCM_SSP2_ST_nuclear_Baseline	FALSE	Above 2C
+SFCM_SSP2_ST_solar_1p5Degree	FALSE	Lower 2C
+SFCM_SSP2_ST_solar_2Degree	FALSE	Higher 2C
+SFCM_SSP2_ST_solar_Baseline	FALSE	Above 2C
+SFCM_SSP2_ST_wind_1p5Degree	FALSE	Lower 2C
+SFCM_SSP2_ST_wind_2Degree	FALSE	Higher 2C
+SFCM_SSP2_ST_wind_Baseline	FALSE	Above 2C
+SFCM_SSP2_SupTech_1p5Degree	FALSE	Lower 2C
+SFCM_SSP2_SupTech_2Degree	FALSE	Above 2C
+SFCM_SSP2_SupTech_Baseline	FALSE	Above 2C
+SFCM_SSP2_combined_1p5Degree	FALSE	Lower 2C
+SFCM_SSP2_combined_2Degree	FALSE	Higher 2C
+SFCM_SSP2_combined_Baseline	FALSE	Above 2C
+SSP1-19	FALSE	1.5C low overshoot
+SSP1-26	FALSE	Lower 2C
+SSP1-34	FALSE	Above 2C
+SSP1-45	FALSE	Above 2C
+SSP1-Baseline	FALSE	Above 2C
+SSP2-19	FALSE	1.5C low overshoot
+SSP2-26	FALSE	Lower 2C
+SSP2-34	FALSE	Above 2C
+SSP2-45	FALSE	Above 2C
+SSP2-60	FALSE	Above 2C
+SSP2-Baseline	FALSE	Above 2C
+SSP3-34	FALSE	Above 2C
+SSP3-45	FALSE	Above 2C
+SSP3-60	FALSE	Above 2C
+SSP3-Baseline	FALSE	Above 2C
+SSP4-26	FALSE	Lower 2C
+SSP4-34	FALSE	Above 2C
+SSP4-45	FALSE	Above 2C
+SSP4-Baseline	FALSE	Above 2C
+SSP5-26	FALSE	Lower 2C
+SSP5-34	FALSE	Above 2C
+SSP5-45	FALSE	Above 2C
+SSP5-60	FALSE	Above 2C
+SSP5-Baseline	FALSE	Above 2C
+CD-LINKS_INDCi	FALSE	Above 2C
+CD-LINKS_NPi	FALSE	Above 2C
+CD-LINKS_NPi2020_1000	FALSE	Lower 2C
+CD-LINKS_NPi2020_1600	FALSE	Above 2C
+CD-LINKS_NPi2020_400	FALSE	1.5C low overshoot
+CD-LINKS_NoPolicy	FALSE	Above 2C
+EMF33_Baseline	FALSE	Above 2C
+EMF33_Med2C_cost100	FALSE	Higher 2C
+EMF33_Med2C_full	FALSE	Higher 2C
+EMF33_Med2C_nobeccs	FALSE	Higher 2C
+EMF33_Med2C_nofuel	FALSE	Lower 2C
+EMF33_Med2C_none	FALSE	Lower 2C
+EMF33_WB2C_cost100	FALSE	1.5C high overshoot
+EMF33_WB2C_full	FALSE	Lower 2C
+EMF33_tax_hi_full	FALSE	Above 2C
+EMF33_tax_hi_none	FALSE	Above 2C
+EMF33_tax_lo_full	FALSE	Above 2C
+EMF33_tax_lo_none	FALSE	Above 2C
+TERL_15D_LowCarbonTransportPolicy	FALSE	1.5C low overshoot
+TERL_15D_NoTransportPolicy	FALSE	1.5C low overshoot
+TERL_2D_LowCarbonTransportPolicy	FALSE	Lower 2C
+TERL_2D_NoTransportPolicy	FALSE	Lower 2C
+TERL_Baseline_LowCarbonTransportPolicy	FALSE	Above 2C
+TERL_Baseline_NoTransportPolicy	FALSE	Above 2C
+Ratchet-1.5-allCDR	FALSE	1.5C high overshoot
+Ratchet-1.5-limCDR	FALSE	1.5C high overshoot
+Ratchet-1.5-limCDR-noOS	FALSE	Below 1.5C
+Ratchet-1.5-noCDR	FALSE	1.5C low overshoot
+Ratchet-1.5-noCDR-noOS	FALSE	Below 1.5C
+Reference	FALSE	Above 2C
+SSP1-19	FALSE	1.5C low overshoot
+SSP1-26	FALSE	Lower 2C
+SSP1-34	FALSE	Above 2C
+SSP1-45	FALSE	Above 2C
+SSP1-Baseline	FALSE	Above 2C
+SSP2-19	FALSE	1.5C high overshoot
+SSP2-26	FALSE	Higher 2C
+SSP2-34	FALSE	Above 2C
+SSP2-45	FALSE	Above 2C
+SSP2-60	FALSE	Above 2C
+SSP2-Baseline	FALSE	Above 2C
+SSP3-Baseline	FALSE	Above 2C
+SSP4-26	FALSE	Higher 2C
+SSP4-34	FALSE	Above 2C
+SSP4-45	FALSE	Above 2C
+SSP4-60	FALSE	Above 2C
+SSP4-Baseline	FALSE	Above 2C
+SSP5-19	FALSE	1.5C high overshoot
+SSP5-26	FALSE	Higher 2C
+SSP5-34	FALSE	Above 2C
+SSP5-45	FALSE	Above 2C
+SSP5-60	FALSE	Above 2C
+SSP5-Baseline	FALSE	Above 2C
+1.0	FALSE	no-climate-assessment
+B2DS	FALSE	no-climate-assessment
+Faster Transition Scenario	FALSE	Higher 2C
+ADVANCE_2020_1.5C-2100	FALSE	1.5C high overshoot
+ADVANCE_2020_Med2C	FALSE	Higher 2C
+ADVANCE_2020_WB2C	FALSE	Lower 2C
+ADVANCE_2030_Med2C	FALSE	Higher 2C
+ADVANCE_2030_WB2C	FALSE	Lower 2C
+ADVANCE_INDC	FALSE	Above 2C
+ADVANCE_NoPolicy	FALSE	Above 2C
+ADVANCE_Reference	FALSE	Above 2C
+CD-LINKS_INDCi	FALSE	Above 2C
+CD-LINKS_NPi	FALSE	Above 2C
+CD-LINKS_NPi2020_1000	FALSE	Lower 2C
+CD-LINKS_NPi2020_1600	FALSE	Higher 2C
+CD-LINKS_NPi2020_400	FALSE	1.5C high overshoot
+CD-LINKS_NoPolicy	FALSE	Above 2C
+IMA15-AGInt	FALSE	1.5C low overshoot
+IMA15-Def	FALSE	1.5C low overshoot
+IMA15-Eff	FALSE	1.5C low overshoot
+IMA15-LiStCh	FALSE	1.5C low overshoot
+IMA15-LoNCO2	FALSE	1.5C high overshoot
+IMA15-Pop	FALSE	1.5C low overshoot
+IMA15-RenElec	FALSE	1.5C high overshoot
+IMA15-TOT	FALSE	1.5C low overshoot
+SSP1-19	FALSE	1.5C low overshoot
+SSP1-26	FALSE	Lower 2C
+SSP1-34	FALSE	Above 2C
+SSP1-45	FALSE	Above 2C
+SSP1-Baseline	FALSE	Above 2C
+SSP2-26	FALSE	Lower 2C
+SSP2-34	FALSE	Above 2C
+SSP2-45	FALSE	Above 2C
+SSP2-60	FALSE	Above 2C
+SSP2-Baseline	FALSE	Above 2C
+SSP3-34	FALSE	Above 2C
+SSP3-45	FALSE	Above 2C
+SSP3-60	FALSE	Above 2C
+SSP3-Baseline	FALSE	Above 2C
+SSP4-26	FALSE	Lower 2C
+SSP4-34	FALSE	Above 2C
+SSP4-45	FALSE	Above 2C
+SSP4-60	FALSE	Above 2C
+SSP4-Baseline	FALSE	Above 2C
+SSP5-34	FALSE	Above 2C
+SSP5-45	FALSE	Above 2C
+SSP5-60	FALSE	Above 2C
+SSP5-Baseline	FALSE	Above 2C
+EMF33_Baseline	FALSE	Above 2C
+EMF33_Med2C_cost100	FALSE	Above 2C
+EMF33_Med2C_full	FALSE	Above 2C
+EMF33_Med2C_limbio	FALSE	Above 2C
+EMF33_Med2C_nobeccs	FALSE	Above 2C
+EMF33_Med2C_nofuel	FALSE	Above 2C
+EMF33_Med2C_none	FALSE	Above 2C
+EMF33_WB2C_cost100	FALSE	Higher 2C
+EMF33_WB2C_full	FALSE	Higher 2C
+EMF33_WB2C_limbio	FALSE	Higher 2C
+EMF33_WB2C_nobeccs	FALSE	Higher 2C
+EMF33_WB2C_nofuel	FALSE	Higher 2C
+EMF33_tax_hi_full	FALSE	Higher 2C
+EMF33_tax_hi_none	FALSE	Above 2C
+EMF33_tax_lo_full	FALSE	Above 2C
+EMF33_tax_lo_none	FALSE	Above 2C
+BAU	FALSE	Above 2C
+DAC15_50	FALSE	1.5C low overshoot
+DAC2_66	FALSE	Higher 2C
+GEA_Eff_1p5C	FALSE	Lower 2C
+GEA_Eff_1p5C_Delay2020	FALSE	Lower 2C
+GEA_Eff_2C_Delay2020	FALSE	Higher 2C
+GEA_Eff_AdvNCO2_1p5C	FALSE	Lower 2C
+GEA_Eff_base	FALSE	Above 2C
+GEA_Mix_1p5C_AdvNCO2_PartialDelay2020	FALSE	Lower 2C
+GEA_Mix_1p5C_AdvTrans_PartialDelay2020	FALSE	Lower 2C
+GEA_Mix_2C_AdvNCO2_PartialDelay2020	FALSE	Higher 2C
+GEA_Mix_2C_AdvTrans_PartialDelay2020	FALSE	Higher 2C
+GEA_Mix_base	FALSE	Above 2C
+ADVANCE_2020_1.5C-2100	FALSE	1.5C low overshoot
+ADVANCE_2020_Med2C	FALSE	Higher 2C
+ADVANCE_2020_WB2C	FALSE	Lower 2C
+ADVANCE_2030_Med2C	FALSE	Higher 2C
+ADVANCE_2030_Price1.5C	FALSE	1.5C high overshoot
+ADVANCE_2030_WB2C	FALSE	Lower 2C
+ADVANCE_INDC	FALSE	Above 2C
+ADVANCE_NoPolicy	FALSE	Above 2C
+ADVANCE_Reference	FALSE	Above 2C
+EMF33_1.5C_cost100	FALSE	1.5C low overshoot
+EMF33_1.5C_full	FALSE	1.5C low overshoot
+EMF33_Baseline	FALSE	Above 2C
+EMF33_Med2C_cost100	FALSE	Higher 2C
+EMF33_Med2C_full	FALSE	Higher 2C
+EMF33_Med2C_limbio	FALSE	Higher 2C
+EMF33_Med2C_nobeccs	FALSE	Lower 2C
+EMF33_Med2C_nofuel	FALSE	Higher 2C
+EMF33_Med2C_none	FALSE	Lower 2C
+EMF33_WB2C_cost100	FALSE	1.5C high overshoot
+EMF33_WB2C_full	FALSE	1.5C high overshoot
+EMF33_WB2C_limbio	FALSE	1.5C high overshoot
+EMF33_WB2C_nofuel	FALSE	1.5C high overshoot
+EMF33_tax_hi_full	FALSE	Lower 2C
+EMF33_tax_hi_none	FALSE	Higher 2C
+EMF33_tax_lo_full	FALSE	Above 2C
+EMF33_tax_lo_none	FALSE	Above 2C
+SSP1-19	FALSE	1.5C low overshoot
+SSP1-26	FALSE	Higher 2C
+SSP1-34	FALSE	Above 2C
+SSP1-45	FALSE	Above 2C
+SSP1-Baseline	FALSE	Above 2C
+SSP2-19	FALSE	1.5C low overshoot
+SSP2-26	FALSE	Higher 2C
+SSP2-34	FALSE	Above 2C
+SSP2-45	FALSE	Above 2C
+SSP2-60	FALSE	Above 2C
+SSP2-Baseline	FALSE	Above 2C
+SSP3-34	FALSE	Above 2C
+SSP3-45	FALSE	Above 2C
+SSP3-60	FALSE	Above 2C
+SSP3-Baseline	FALSE	Above 2C
+CD-LINKS_INDCi	FALSE	Above 2C
+CD-LINKS_NPi	FALSE	Above 2C
+CD-LINKS_NPi2020_1000	FALSE	Lower 2C
+CD-LINKS_NPi2020_1600	FALSE	Higher 2C
+CD-LINKS_NPi2020_400	FALSE	1.5C high overshoot
+CD-LINKS_NoPolicy	FALSE	Above 2C
+LowEnergyDemand	FALSE	1.5C low overshoot
+ADVANCE_2020_1.5C-2100	FALSE	1.5C low overshoot
+ADVANCE_2020_Med2C	FALSE	Lower 2C
+ADVANCE_2020_WB2C	FALSE	1.5C high overshoot
+ADVANCE_2030_1.5C-2100	FALSE	1.5C high overshoot
+ADVANCE_2030_Med2C	FALSE	Lower 2C
+ADVANCE_2030_Price1.5C	FALSE	1.5C high overshoot
+ADVANCE_2030_WB2C	FALSE	1.5C high overshoot
+ADVANCE_INDC	FALSE	Above 2C
+ADVANCE_NoPolicy	FALSE	Above 2C
+ADVANCE_Reference	FALSE	Above 2C
+CD-LINKS_INDCi	FALSE	Above 2C
+CD-LINKS_NPi	FALSE	Above 2C
+CD-LINKS_NPi2020_1000	FALSE	Lower 2C
+CD-LINKS_NPi2020_1600	FALSE	Higher 2C
+CD-LINKS_NPi2020_400	FALSE	1.5C high overshoot
+CD-LINKS_NoPolicy	FALSE	Above 2C
+EMF33_1.5C_cost100	FALSE	Below 1.5C
+EMF33_1.5C_full	FALSE	Below 1.5C
+EMF33_1.5C_limbio	FALSE	Below 1.5C
+EMF33_1.5C_nofuel	FALSE	Below 1.5C
+EMF33_Baseline	FALSE	Above 2C
+EMF33_Med2C_cost100	FALSE	Lower 2C
+EMF33_Med2C_full	FALSE	Lower 2C
+EMF33_Med2C_limbio	FALSE	Lower 2C
+EMF33_Med2C_nobeccs	FALSE	Lower 2C
+EMF33_Med2C_nofuel	FALSE	Lower 2C
+EMF33_Med2C_none	FALSE	Lower 2C
+EMF33_WB2C_cost100	FALSE	1.5C low overshoot
+EMF33_WB2C_full	FALSE	1.5C low overshoot
+EMF33_WB2C_limbio	FALSE	1.5C low overshoot
+EMF33_WB2C_nobeccs	FALSE	1.5C low overshoot
+EMF33_WB2C_nofuel	FALSE	1.5C low overshoot
+EMF33_WB2C_none	FALSE	1.5C low overshoot
+EMF33_tax_hi_full	FALSE	Higher 2C
+EMF33_tax_hi_none	FALSE	Higher 2C
+EMF33_tax_lo_full	FALSE	Above 2C
+EMF33_tax_lo_none	FALSE	Above 2C
+EMC_Def_100$	FALSE	1.5C low overshoot
+EMC_Def_30$	FALSE	Higher 2C
+EMC_LimSW_100$	FALSE	1.5C low overshoot
+EMC_LimSW_30$	FALSE	Above 2C
+EMC_NucPO_100$	FALSE	1.5C low overshoot
+EMC_NucPO_30$	FALSE	Higher 2C
+EMC_lowEI_100$	FALSE	1.5C low overshoot
+EMC_lowEI_30$	FALSE	Higher 2C
+ADVANCE_2020_1.5C-2100	FALSE	1.5C high overshoot
+ADVANCE_2020_Med2C	FALSE	Higher 2C
+ADVANCE_2020_WB2C	FALSE	Lower 2C
+ADVANCE_2030_1.5C-2100	FALSE	1.5C high overshoot
+ADVANCE_2030_Med2C	FALSE	Above 2C
+ADVANCE_2030_Price1.5C	FALSE	1.5C high overshoot
+ADVANCE_2030_WB2C	FALSE	Higher 2C
+ADVANCE_INDC	FALSE	Above 2C
+ADVANCE_NoPolicy	FALSE	Above 2C
+ADVANCE_Reference	FALSE	Above 2C
+CEMICS-1.5-CDR12	FALSE	1.5C low overshoot
+CEMICS-1.5-CDR20	FALSE	1.5C high overshoot
+CEMICS-1.5-CDR8	FALSE	1.5C low overshoot
+CEMICS-2.0-CDR12	FALSE	Lower 2C
+CEMICS-2.0-CDR20	FALSE	Higher 2C
+CEMICS-2.0-CDR8	FALSE	Lower 2C
+CEMICS-Ref	FALSE	Above 2C
+SSP1-19	FALSE	1.5C high overshoot
+SSP1-26	FALSE	Higher 2C
+SSP1-34	FALSE	Above 2C
+SSP1-45	FALSE	Above 2C
+SSP1-Baseline	FALSE	Above 2C
+SSP2-19	FALSE	1.5C high overshoot
+SSP2-26	FALSE	Higher 2C
+SSP2-34	FALSE	Above 2C
+SSP2-45	FALSE	Above 2C
+SSP2-60	FALSE	Above 2C
+SSP2-Baseline	FALSE	Above 2C
+SSP5-19	FALSE	1.5C high overshoot
+SSP5-26	FALSE	Above 2C
+SSP5-34	FALSE	Above 2C
+SSP5-45	FALSE	Above 2C
+SSP5-60	FALSE	Above 2C
+SSP5-Baseline	FALSE	Above 2C
+CD-LINKS_INDCi	FALSE	Above 2C
+CD-LINKS_NPi	FALSE	Above 2C
+CD-LINKS_NPi2020_1000	FALSE	Lower 2C
+CD-LINKS_NPi2020_1600	FALSE	Higher 2C
+CD-LINKS_NPi2020_400	FALSE	1.5C high overshoot
+CD-LINKS_NoPolicy	FALSE	Above 2C
+EMF33_1.5C_cost100	FALSE	1.5C high overshoot
+EMF33_1.5C_full	FALSE	1.5C high overshoot
+EMF33_1.5C_nofuel	FALSE	1.5C high overshoot
+EMF33_Baseline	FALSE	Above 2C
+EMF33_Med2C_cost100	FALSE	Above 2C
+EMF33_Med2C_full	FALSE	Above 2C
+EMF33_Med2C_limbio	FALSE	Higher 2C
+EMF33_Med2C_nobeccs	FALSE	Above 2C
+EMF33_Med2C_nofuel	FALSE	Above 2C
+EMF33_Med2C_none	FALSE	Higher 2C
+EMF33_WB2C_cost100	FALSE	Higher 2C
+EMF33_WB2C_full	FALSE	Higher 2C
+EMF33_WB2C_limbio	FALSE	Lower 2C
+EMF33_WB2C_nobeccs	FALSE	Lower 2C
+EMF33_WB2C_nofuel	FALSE	Lower 2C
+EMF33_WB2C_none	FALSE	Lower 2C
+EMF33_tax_hi_full	FALSE	Higher 2C
+EMF33_tax_hi_none	FALSE	Above 2C
+EMF33_tax_lo_full	FALSE	Above 2C
+EMF33_tax_lo_none	FALSE	Above 2C
+PEP_1p5C_full_NDC	FALSE	1.5C high overshoot
+PEP_1p5C_full_eff	FALSE	1.5C high overshoot
+PEP_1p5C_full_goodpractice	FALSE	1.5C high overshoot
+PEP_1p5C_full_netzero	FALSE	1.5C high overshoot
+PEP_1p5C_red_eff	FALSE	1.5C low overshoot
+PEP_2C_full_NDC	FALSE	Higher 2C
+PEP_2C_full_eff	FALSE	Lower 2C
+PEP_2C_full_goodpractice	FALSE	Higher 2C
+PEP_2C_full_netzero	FALSE	Lower 2C
+PEP_2C_red_NDC	FALSE	Lower 2C
+PEP_2C_red_eff	FALSE	Lower 2C
+PEP_2C_red_goodpractice	FALSE	Lower 2C
+PEP_2C_red_netzero	FALSE	Lower 2C
+SMP_1p5C_Def	FALSE	1.5C low overshoot
+SMP_1p5C_Sust	FALSE	Below 1.5C
+SMP_1p5C_early	FALSE	Below 1.5C
+SMP_1p5C_lifesty	FALSE	1.5C low overshoot
+SMP_1p5C_regul	FALSE	1.5C low overshoot
+SMP_2C_Def	FALSE	Lower 2C
+SMP_2C_Sust	FALSE	1.5C low overshoot
+SMP_2C_early	FALSE	Lower 2C
+SMP_2C_lifesty	FALSE	1.5C high overshoot
+SMP_2C_regul	FALSE	1.5C high overshoot
+SMP_REF_Def	FALSE	Above 2C
+SMP_REF_Sust	FALSE	Above 2C
+CEDS	FALSE	reference
+IEA Energy Statistics (r2017)	FALSE	reference
+Sky	FALSE	no-climate-assessment
+SSP1-19	FALSE	1.5C low overshoot
+SSP1-26	FALSE	Lower 2C
+SSP1-34	FALSE	Above 2C
+SSP1-45	FALSE	Above 2C
+SSP1-Baseline	FALSE	Above 2C
+SSP2-26	FALSE	Lower 2C
+SSP2-34	FALSE	Above 2C
+SSP2-45	FALSE	Above 2C
+SSP2-60	FALSE	Above 2C
+SSP2-Baseline	FALSE	Above 2C
+SSP3-34	FALSE	Above 2C
+SSP3-45	FALSE	Above 2C
+SSP3-60	FALSE	Above 2C
+SSP3-Baseline	FALSE	Above 2C
+SSP4-19	FALSE	1.5C low overshoot
+SSP4-26	FALSE	Lower 2C
+SSP4-34	FALSE	Above 2C
+SSP4-45	FALSE	Above 2C
+SSP4-60	FALSE	Above 2C
+SSP4-Baseline	FALSE	Above 2C
+SSP5-34	FALSE	Above 2C
+SSP5-45	FALSE	Above 2C
+SSP5-60	FALSE	Above 2C
+SSP5-Baseline	FALSE	Above 2C
+ADVANCE_2020_1.5C-2100	FALSE	1.5C low overshoot
+ADVANCE_2020_Med2C	FALSE	Higher 2C
+ADVANCE_2020_WB2C	FALSE	Lower 2C
+ADVANCE_2030_Med2C	FALSE	Higher 2C
+ADVANCE_2030_Price1.5C	FALSE	Lower 2C
+ADVANCE_2030_WB2C	FALSE	Lower 2C
+ADVANCE_INDC	FALSE	Above 2C
+ADVANCE_NoPolicy	FALSE	Above 2C
+ADVANCE_Reference	FALSE	Above 2C
+CD-LINKS_INDCi	FALSE	Above 2C
+CD-LINKS_NPi	FALSE	Above 2C
+CD-LINKS_NPi2020_1000	FALSE	1.5C low overshoot
+CD-LINKS_NPi2020_1600	FALSE	Lower 2C
+CD-LINKS_NPi2020_400	FALSE	Below 1.5C
+CD-LINKS_NoPolicy	FALSE	Above 2C
