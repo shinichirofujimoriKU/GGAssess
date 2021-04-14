@@ -127,9 +127,9 @@ allmodel_v2 <- filter(allmodel,Variable %in% c("Pol_Cos_GDP_Los_rat_NPV_3pc","Po
 plot.0 <- ggplot() + 
   geom_point(data=filter(IPCCSR15_v2,Pol_Cos_GDP_Los_rat_NPV_3pc<=8 & Pol_Cos_GDP_Los_rat_NPV_3pc>=-10 & Emi_CO2_Cum<=2000 ),aes(x=Emi_CO2_Cum, y = Pol_Cos_GDP_Los_rat_NPV_3pc),color="black",alpha=1,shape=21,size=1.0,fill="white") +
   MyThemeLine +  xlab("Cumulative CO2 emissions from 2011 to 2100 (GtCO2)") + ylab("Net present value of cumulative GDP loss rates (%)")  +  ggtitle(paste("",sep=" ")) +
-  theme(legend.title=element_blank()) +    annotate("segment",x=300,xend=2000,y=0,yend=0,linetype="solid",color="grey") +
+  theme(legend.title=element_blank()) + annotate("segment",x=300,xend=2000,y=0,yend=0,linetype="solid",color="grey") +
   geom_point(data=filter(allmodel_v2, Pol_Cos_GDP_Los_rat_NPV_3pc>=-10 & Emi_CO2_Cum/1000>=500 & NDC=="off" & Region=="World" ),aes(x=Emi_CO2_Cum/1000, y = Pol_Cos_GDP_Los_rat_NPV_3pc,shape=Model,color=Model),size=3.0,fill="white") +
-  scale_shape_manual(values=c(21,22,23,24,25,20))+ scale_color_manual(values=pastelpal)
+  scale_shape_manual(values=c(21,22,23,24,25,20))+ scale_color_manual(values=linepalette)
 outname <- paste0(outputdir,"/main/GDPLoss_CO2.png")
 ggsave(plot.01, file=outname, dpi = 150, width=5, height=5,limitsize=FALSE)
 FigList <- c(FigList,list("GDPLoss_CO2"=plot.0))
@@ -137,9 +137,9 @@ FigList <- c(FigList,list("GDPLoss_CO2"=plot.0))
 plot.0 <- ggplot() + 
   geom_point(data=filter(IPCCSR15_v2,Pol_Cos_GDP_Los_rat_NPV_3pc<=8 & Pol_Cos_GDP_Los_rat_NPV_3pc>=-10 & Emi_Kyo_Gas_Cum<=2500),aes(x=Emi_Kyo_Gas_Cum, y = Pol_Cos_GDP_Los_rat_NPV_3pc),color="black",alpha=1,shape=21,size=1.0,fill="white") +
   MyThemeLine + xlab("Cumulative Kyoto Gas emissions from 2011 to 2100 (GtCO2eq)") + ylab("Net present value of cumulative GDP loss rates (%)")  +  ggtitle(paste("",sep=" ")) +
-  theme(legend.title=element_blank()) +    annotate("segment",x=800,xend=2500,y=0,yend=0,linetype="solid",color="grey") +
+  theme(legend.title=element_blank()) + annotate("segment",x=800,xend=2500,y=0,yend=0,linetype="solid",color="grey") +
   geom_point(data=filter(left_join(allmodel_v2,ScenarioOrder), Pol_Cos_GDP_Los_rat_NPV_3pc>=-10 & Emi_Kyo_Gas_Cum/1000>=500 & NDC=="off" & Region=="World"),aes(x=Emi_Kyo_Gas_Cum/1000, y = Pol_Cos_GDP_Los_rat_NPV_3pc,shape=Model,color=Model),size=3.0,fill="white") +
-  scale_shape_manual(values=c(21,22,23,24,25,20))+ scale_color_manual(values=pastelpal)
+  scale_shape_manual(values=c(21,22,23,24,25,20))+ scale_color_manual(values=linepalette)
 outname <- paste0(outputdir,"/main/GDPLoss_Kyotogas.png")
 ggsave(plot.0, file=outname, dpi = 150, width=5, height=5,limitsize=FALSE)
 FigList <- c(FigList,list("GDPLoss_Kyotogas"=plot.0))
@@ -161,12 +161,12 @@ plot.0 <- ggplot() +
 FigList <- c(FigList,list("GDPLoss_overtime_lit"=plot.0))
 
 plot.0 <- ggplot() + 
-  geom_point(data=filter(left_join(allmodel_v2,ScenarioOrder), Pol_Cos_GDP_Los_rat_NPV_3pc>=-10 & Region %in% RegionAgg & NDC=="off"),aes(x=reorder(SCENARIO,ScenarioOrder), y = Pol_Cos_GDP_Los_rat_NPV_3pc,shape=Model,color=Model),size=3.0,fill="white") +
+  geom_point(data=filter(left_join(allmodel_v2,ScenarioOrder), Pol_Cos_GDP_Los_rat_NPV_3pc>=-10 & Region %in% RegionAgg & NDC=="off"),aes(x=reorder(ScenarioOrder,SCENARIO), y = Pol_Cos_GDP_Los_rat_NPV_3pc,shape=Model,color=Model),size=3.0,fill="white") +
   MyThemeLine +  
   xlab("Cumulative CO2 emissions from 2011 to 2100 (GtCO2)") + ylab("Net present value of cumulative GDP loss rates (%)")  +  ggtitle(paste("",sep=" ")) +
   theme(legend.title=element_blank())  +
   scale_shape_manual(values=c(21,22,23,24,25,20))+ scale_color_manual(values=pastelpal) +
-    facet_wrap(.~Region)
+    facet_wrap(.~Region)+ annotate("segment",x=0,xend=10,y=0,yend=0,linetype="solid",color="grey")
 outname <- paste0(outputdir,"/main/GDPLoss_NPV_Region.png")
 ggsave(plot.0, file=outname, dpi = 150, width=10, height=6,limitsize=FALSE)
 FigList <- c(FigList,list("GDPLoss_NPV_Region"=plot.0))
@@ -184,9 +184,11 @@ allmodel_v2 <- left_join(allmodel_v2_0,allmodel_v2_CO2)
 IPCCSR15_v2$Y <- as.numeric(levels(IPCCSR15_v2$Y))[IPCCSR15_v2$Y]
 
 plot.0 <- ggplot() + 
-  geom_point(data=filter(IPCCSR15_v2,Value>=-10 ),aes(x=DiscountRates, y = Value,color=CO2),alpha=0.5,shape=21,size=1.0,fill="white") +
-  MyThemeLine +  xlab("Discont rates (%)") + ylab("Net present value of cumulative GDP loss rates (%)")  +  ggtitle(paste("",sep=" ")) +
-  scale_color_gradient(low="green",high="red",name="Carbon budgets (GtCO2)") +    annotate("segment",x=0,xend=4,y=0,yend=0,linetype="solid",color="grey") +
+  geom_point(data=filter(IPCCSR15_v2,Value<=10 ),aes(x=DiscountRates, y = Value,color=CO2),alpha=0.5,shape=21,size=1.0,fill="white") +
+  MyThemeLine +  xlab("Discount rates (%)") + ylab("Net present value of cumulative GDP loss rates (%)")  +  ggtitle(paste("",sep=" ")) +
+  scale_color_viridis_c(name=expression(paste("Carbon budgets " * "(" * GtCO[2] * ")")))+
+#  scale_color_gradient(low="green",high="red",name=expression("Carbon budgets \n(GtCO2)")) + 
+  annotate("segment",x=0,xend=4,y=0,yend=0,linetype="solid",color="grey") +
   geom_point(data=filter(allmodel_v2,Model=="FullComb"),aes(x=DiscountRates, y = Value,color=CO2/1000),size=3.0,shape=22)  + 
   facet_wrap(.~Y)
 outname <- paste0(outputdir,"/main/GDPLoss_DisCount.png")
@@ -196,10 +198,10 @@ FigList <- c(FigList,list("GDPLoss_DisCount"=plot.0))
 #--- investment figure
 varname <- data.frame("Variable"=c("Inv_Ene_Sup","Red_Cos_Emi_GHG","Inv_Ene_Dem_Eff_and_Dec"),"VarName"=c("Energy Supply","Non-Energy related","Energy Demand"))
 allmodel_v2 <- filter(allmodel,Variable %in% varname$Variable & Region=="World"  & Indicator=="dif" & Y==2100 & NDC!="on") %>%
-  left_join(ScenarioOrder) %>% left_join(varname)
+  inner_join(ScenarioOrder) %>% left_join(varname)
 plot.0 <- ggplot() + 
-  geom_bar(data=allmodel_v2,aes(x=reorder(SCENARIO,ScenarioOrder), y = -(Value) , fill=VarName), stat="identity") +
-  ylab("Additional Investment") + xlab("Mitigation policy stringency") +labs(fill="")+ guides(fill=guide_legend(reverse=TRUE)) + MyThemeLine +
+  geom_bar(data=allmodel_v2,aes(x=reorder(ScenarioOrder,SCENARIO), y = -(Value) , fill=VarName), stat="identity") +
+  ylab("Additional Investment (billion $/yr)") + xlab("Mitigation policy stringency") +labs(fill="")+ guides(fill=guide_legend(reverse=TRUE)) + MyThemeLine +
   theme(legend.position="bottom", text=element_text(size=12),  
         axis.text.x=element_text(angle=45, vjust=0.9, hjust=1, size = 12)) +
   guides(fill=guide_legend(ncol=3)) + ggtitle(paste("World ","Investment",sep=" ")) +
@@ -211,7 +213,7 @@ FigList <- c(FigList,list("Investment"=plot.0))
 allmodel_v2 <- filter(allmodel,Variable %in% varname$Variable & Region=="World"  & Indicator=="dif" & SCENARIO=="1000C" & NDC!="on") %>% left_join(varname)
 plot.0 <- ggplot() + 
   geom_bar(data=allmodel_v2,aes(x=Y, y = -(Value) , fill=VarName), stat="identity") +
-  ylab("Additional Investment") + xlab("Year") +labs(fill="")+ guides(fill=guide_legend(reverse=TRUE)) + MyThemeLine +
+  ylab("Additional Investment (billion $/yr)") + xlab("Year") +labs(fill="") + MyThemeLine +
   theme(legend.position="bottom", text=element_text(size=12),  
         axis.text.x=element_text(angle=45, vjust=0.9, hjust=1, size = 12)) +  guides(fill=guide_legend(ncol=3)) +
   facet_wrap( ~ Model,ncol=5) + scale_fill_manual(values=pastelpal)  + theme(legend.position='bottom')
@@ -224,27 +226,28 @@ rr <- "World"
 plodata <- filter(allmodel,Variable=="Pol_Cos_GDP_Los_rat" & Model!="Reference"& Region==rr & Indicator=="dif" & SCENARIO=="1000C" & NDC!="on")
 plot.0 <- ggplot() + 
   geom_area(data=filter(plodata,Model!="FullComb"),aes(x=Y, y = Value , fill=Model), stat="identity") + 
-  ylab("GDP loss rate differences (%) ") + xlab("Year") +labs(fill="")+ guides(fill=guide_legend(reverse=TRUE)) + MyThemeLine +
-  geom_line(data=filter(plodata,Model=="FullComb"),aes(x=Y, y = Value ), stat="identity") + scale_fill_manual(values=pastelpal) + 
+  ylab("GDP loss rate differences (%) ") + xlab("Year") +labs(fill="") + MyThemeLine +
+  geom_line(data=filter(plodata,Model=="FullComb"),aes(x=Y, y = Value ), stat="identity") + scale_fill_manual(values=linepalette[c(2,3,5,6)]) + 
   theme(legend.position="bottom", text=element_text(size=12),  
         axis.text.x=element_text(angle=45, vjust=0.9, hjust=1, size = 12)) +
   guides(fill=guide_legend(ncol=1)) + scale_x_continuous(breaks=seq(miny,maxy,10)) +  ggtitle(paste(rr,"GDP loss rate differences from Default",sep=" ")) +
-  annotate("segment",x=miny,xend=maxy,y=0,yend=0,linetype="solid",color="grey") + theme(legend.position='right')
+  annotate("segment",x=2010,xend=maxy,y=0,yend=0,linetype="solid",color="grey") + theme(legend.position='right')
 outname <- paste0(outputdir,"/main/GDP_loss.png")
 ggsave(plot.0, file=outname, dpi = 150, width=10, height=6,limitsize=FALSE)
 FigList <- c(FigList,list("GDP_loss_Dif"=plot.0))
 
-plotvarlist <- c("Pol_Cos_GDP_Los_rat_NPV_3pc","Inv_Ene_Sup","Inv_Ene_Dem_Eff_and_Dec")
+plotvarlist <- c("Pol_Cos_GDP_Los_rat_NPV_3pc","Inv_Ene_Sup","Inv_Ene_Dem_Eff_and_Dec","Pol_Cos_Cns_Los_rat_NPV_3pc")
 for(jj in plotvarlist){
   plodata <- filter(allmodel,Variable %in% c("Emi_CO2_Cum",jj) & Model %in% c("FullComb","Def") & Region==rr & Indicator=="abs" & NDC!="on") %>% 
     spread(key=Variable,value=Value) %>%    rename("VV"=jj)
   plot <- ggplot() + 
-    geom_point(data=filter(plodata,Y==2100 & Emi_CO2_Cum<=1800*1000),aes(x=Emi_CO2_Cum/1000, y = VV,color=Model ), stat="identity",size=15) + scale_color_manual(values=pastelpal) + 
+    geom_point(data=filter(plodata,Y==2100 & Emi_CO2_Cum<=1800*1000),aes(x=Emi_CO2_Cum/1000, y = VV,color=Model ), stat="identity",size=2) + scale_color_manual(values=pastelpal) + 
     ylab(paste0(varalllist[varalllist$V1==jj,2]," ",varalllist[varalllist$V1==jj,3])) + xlab("Carbon budget 2011-2100 (GtCO2)") +labs(color="")+ guides(color=guide_legend(reverse=TRUE)) + MyThemeLine +
     theme(legend.position="bottom", text=element_text(size=12),axis.text.x=element_text(angle=45, vjust=0.9, hjust=1, size = 12)) +
     guides(fill=guide_legend(ncol=1)) +  ggtitle(paste(rr,varalllist[varalllist$V1==jj,2],sep=" ")) +theme(legend.position='right')
   outname <- paste0(outputdir,rr,"/dif/",jj,".png")
   ggsave(plot, file=outname, dpi = 150, width=7, height=7,limitsize=FALSE)
+  if(jj=="Pol_Cos_Cns_Los_rat_NPV_3pc"){FigList <- c(FigList,list("Pol_Cos_Cns_Los_rat_NPV_3pc"=plot))}
 } 
 
 #--Regional variation
@@ -253,7 +256,7 @@ plodata <- filter(allmodel,Variable=="Pol_Cos_GDP_Los_rat_NPV_3pc" & Model!="Ref
 plot.0 <- ggplot() + 
   geom_bar(data=filter(plodata,Model!="FullComb"),aes(x=Region, y = Value , fill=Model), stat="identity") + 
   ylab("GDP loss rate differences (%) ") + xlab("Region") +labs(fill="")+ guides(fill=guide_legend(reverse=TRUE)) + MyThemeLine +
-  scale_fill_manual(values=pastelpal) +
+  scale_fill_manual(values=linepalette[c(2,3,5,6)]) +
   geom_point(data=filter(plodata,Model=="FullComb"),aes(x=Region, y = Value ), stat="identity")  + 
   theme(legend.position="bottom", text=element_text(size=12),  
         axis.text.x=element_text(angle=45, vjust=0.9, hjust=1, size = 12)) +
@@ -263,25 +266,15 @@ outname <- paste0(outputdir,"/main/Region1.png")
 ggsave(plot.0, file=outname, dpi = 150, width=5, height=5,limitsize=FALSE)
 FigList <- c(FigList,list("Region1"=plot.0))
 
-#--2100 NPV total
-allmodel_v2 <- filter(allmodel,Variable %in% c("Pol_Cos_GDP_Los_rat_NPV_3pc","Pol_Cos_GDP_Los_rat_NPV_1pc","Pol_Cos_GDP_Los_rat_NPV_5pc") & Region %in% c("World","R5OECD90+EU","R5REF","R5ASIA","R5MAF","R5LAM")  & Y==2100 & SCENARIO=="1000C" & Indicator=="abs" & NDC=="off") %>%  spread(value=Value,key=Variable) 
-plot.0 <- ggplot() + 
-  geom_point(data=filter(allmodel_v2, Pol_Cos_GDP_Los_rat_NPV_3pc>=-10),aes(x=Region, y = Pol_Cos_GDP_Los_rat_NPV_3pc,shape=Model,color=Model),size=3.0,fill="white") +
-  MyThemeLine +  
-  xlab("Region") + ylab("Net present value of cumulative GDP loss rates (%)")  +  ggtitle(paste("",sep=" ")) +
-  theme(legend.title=element_blank()) +  scale_shape_manual(values=c(21,22,23,24,25,20))+ scale_color_manual(values=pastelpal)
-outname <- paste0(outputdir,"/main/NPV_region.png")
-ggsave(plot.0, file=outname, dpi = 150, width=5, height=5,limitsize=FALSE)
-FigList <- c(FigList,list("NPV_regopm"=plot.0))
 
 #--Intensity
-plodata <- filter(allmodel,Variable %in% c("Ene_Its","Car_Its") & Model!="Reference"& Region %in% c("World","R5OECD90+EU","R5REF","R5ASIA","R5MAF","R5LAM") & Indicator=="abs" & SCENARIO=="Baseline" & NDC!="on")
+plodata <- filter(allmodel,Variable %in% c("Ene_Its","Car_Its") & Model!="Reference"& Region %in% c("World","R5OECD90+EU","R5REF","R5ASIA","R5MAF","R5LAM") & Indicator=="abs" & SCENARIO=="Baseline" & NDC!="on") %>% left_join(data.frame(Variable=c("Ene_Its","Car_Its"),Variable2=c("Energy Intensity","Carbon Intensity")))
 plot.0 <- ggplot() + 
   geom_line(data=filter(plodata,Model!="FullComb"),aes(x=Y, y = Value , color=Region)) + 
-  ylab("Intensity") + xlab("Year") +labs(color="")+ guides(color=guide_legend(reverse=TRUE)) + MyThemeLine +scale_color_manual(values=pastelpal) +
+  ylab("Intensity") + xlab("Year") +labs(color="")+ guides(color=guide_legend(reverse=TRUE)) + MyThemeLine +scale_color_manual(values=linepalette) +
   theme(legend.position="bottom", text=element_text(size=12),  
         axis.text.x=element_text(angle=45, vjust=0.9, hjust=1, size = 12)) +
-  facet_wrap(. ~ Variable,scales="free")
+  facet_wrap(. ~ Variable2,scales="free")
 outname <- paste0(outputdir,"/main/Intensity.png")
 ggsave(plot.0, file=outname, dpi = 150, width=5, height=5,limitsize=FALSE)
 FigList <- c(FigList,list("Intensity"=plot.0))
@@ -291,8 +284,8 @@ plodata <- filter(allmodel,Variable %in% c("Sha_Val_Add_Ind_Ene") & Model!="Refe
 plot.0 <- ggplot() + 
   geom_line(data=filter(plodata,Model=="Def"),aes(x=Y, y = Value , color=Region, group=interaction(SCENARIO,Region),stat="identity")) + 
   geom_point(data=filter(plodata,Model=="Def"),aes(x=Y, y = Value , color=Region,shape=SCENARIO),size=3,fill="white") + 
-  ylab("Share of value added of energy industries (%)") + xlab("Year") +labs(color="")+ guides(color=guide_legend(reverse=TRUE)) + MyThemeLine +
-  scale_color_manual(values=pastelpal) + scale_shape_manual(values=c(16,17))
+  ylab("Share of value added of energy industries (%)") + xlab("Year") +labs(color="",shape="")+ guides(color=guide_legend(reverse=TRUE)) + MyThemeLine +
+  scale_color_manual(values=linepalette) + scale_shape_manual(values=c(16,17))
 outname <- paste0(outputdir,"/main/ShareValAdd_ind.png")
 ggsave(plot.0, file=outname, dpi = 150, width=5, height=5,limitsize=FALSE)
 FigList <- c(FigList,list("ShareValAdd_ind"=plot.0))
@@ -301,8 +294,8 @@ plodata <- filter(allmodel,Variable %in% c("Sha_Val_Add_Agr") & Model!="Referenc
 plot.0 <- ggplot() + 
   geom_line(data=filter(plodata,Model=="Def"),aes(x=Y, y = Value , color=Region, group=interaction(SCENARIO,Region),stat="identity")) + 
   geom_point(data=filter(plodata,Model=="Def"),aes(x=Y, y = Value , color=Region,shape=SCENARIO),size=3,fill="white") + 
-  ylab("Share of value added of agriculture (%)") + xlab("Year") +labs(color="")+ guides(color=guide_legend(reverse=TRUE)) + MyThemeLine +
-  scale_color_manual(values=pastelpal) + scale_shape_manual(values=c(16,17))
+  ylab("Share of value added of agriculture (%)") + xlab("Year") +labs(color="",shape="")+ guides(color=guide_legend(reverse=TRUE)) + MyThemeLine +
+  scale_color_manual(values=linepalette) + scale_shape_manual(values=c(16,17))
 outname <- paste0(outputdir,"/main/ShareValAdd_agr.png")
 ggsave(plot.0, file=outname, dpi = 150, width=5, height=5,limitsize=FALSE)
 FigList <- c(FigList,list("ShareValAdd_agr"=plot.0))
@@ -319,18 +312,30 @@ ggsave(plot.0, file=outname, dpi = 150, width=5, height=5,limitsize=FALSE)
 FigList <- c(FigList,list("CapialStock"=plot.0))
 
 #--NDC variation
-#---2100 NPV total
-allmodel_v2 <- filter(allmodel,Variable %in% c("Pol_Cos_GDP_Los_rat_NPV_3pc","Pol_Cos_GDP_Los_rat_NPV_1pc","Pol_Cos_GDP_Los_rat_NPV_5pc","Emi_CO2_Cum","Emi_Kyo_Gas_Cum") & Region %in% c("World","R5OECD90+EU","R5REF","R5ASIA","R5MAF","R5LAM")  & Y==2100 & Indicator=="abs" & NDC=="on") %>%  spread(value=Value,key=Variable) 
+#--2100 NPV total
+allmodel_v2 <- filter(allmodel,Variable %in% c("Pol_Cos_GDP_Los_rat_NPV_3pc","Pol_Cos_GDP_Los_rat_NPV_1pc","Pol_Cos_GDP_Los_rat_NPV_5pc") & Region %in% c("World","R5OECD90+EU","R5REF","R5ASIA","R5MAF","R5LAM")  & Y==2100 & SCENARIO=="1000C" & Indicator=="abs" & NDC=="off") %>%  spread(value=Value,key=Variable) 
+allmodel_v21 <- filter(allmodel,Variable %in% c("Pol_Cos_GDP_Los_rat_NPV_3pc","Pol_Cos_GDP_Los_rat_NPV_1pc","Pol_Cos_GDP_Los_rat_NPV_5pc","Emi_CO2_Cum","Emi_Kyo_Gas_Cum") & Region %in% c("World","R5OECD90+EU","R5REF","R5ASIA","R5MAF","R5LAM") & Y==2100 & Indicator=="abs" & NDC=="on") %>%  spread(value=Value,key=Variable) 
+maxv <- ceiling(max(allmodel_v2$Pol_Cos_GDP_Los_rat_NPV_3pc,allmodel_v21$Pol_Cos_GDP_Los_rat_NPV_3pc))
+minv <- floor(min(allmodel_v2$Pol_Cos_GDP_Los_rat_NPV_3pc,allmodel_v21$Pol_Cos_GDP_Los_rat_NPV_3pc))
+
 plot.0 <- ggplot() + 
   geom_point(data=filter(allmodel_v2, Pol_Cos_GDP_Los_rat_NPV_3pc>=-10),aes(x=Region, y = Pol_Cos_GDP_Los_rat_NPV_3pc,shape=Model,color=Model),size=3.0,fill="white") +
-  MyThemeLine +  xlab("Region") + ylab("Net present value of cumulative GDP loss rates (%)")  +  ggtitle(paste("",sep=" ")) +
-  theme(legend.title=element_blank()) +  scale_shape_manual(values=c(21,22,23,24,25,20))+ scale_color_manual(values=pastelpal)
+  MyThemeLine + ylim(minv,maxv)  +
+  xlab("Region") + ylab("Net present value of cumulative GDP loss rates (%)")  +  ggtitle(paste("",sep=" ")) +
+  theme(legend.title=element_blank()) +  scale_shape_manual(values=c(21,22,23,24,25,20))+ scale_color_manual(values=linepalette) +
+  annotate("segment",x=0,xend=6.5,y=0,yend=0,linetype="solid",color="grey")
+outname <- paste0(outputdir,"/main/NPV_region.png")
+ggsave(plot.0, file=outname, dpi = 150, width=5, height=5,limitsize=FALSE)
+FigList <- c(FigList,list("NPV_regopm"=plot.0))
+plot.0 <- ggplot() + 
+  geom_point(data=filter(allmodel_v21, Pol_Cos_GDP_Los_rat_NPV_3pc>=-10),aes(x=Region, y = Pol_Cos_GDP_Los_rat_NPV_3pc,shape=Model,color=Model),size=3.0,fill="white") +
+  MyThemeLine +  xlab("Region") + ylab("Net present value of cumulative GDP loss rates (%)")  +  ggtitle(paste("",sep=" "))+ ylim(minv,maxv) +
+  theme(legend.title=element_blank()) +  scale_shape_manual(values=c(21,22,23,24,25,20))+ scale_color_manual(values=linepalette) +
+  annotate("segment",x=0,xend=6.5,y=0,yend=0,linetype="solid",color="grey")
 outname <- paste0(outputdir,"/main/NPV_NDCs.png")
 ggsave(plot.0, file=outname, dpi = 150, width=5, height=5,limitsize=FALSE)
 FigList <- c(FigList,list("NPV_NDC"=plot.0))
 
-#---- Merge plots
-source("plotmerge")
 
 #---IAMC tempalte loading and data mergeEnd
 #---function
@@ -359,6 +364,7 @@ plotflag <- as.list(nalist)
 names(allplot) <- nalist
 names(plotflag) <- nalist
 allplotcge <- list(1)
+allplotcge_dif <- list(1)
 
 for(rr in region){
   dir.create(paste0("../output/",rr))
@@ -378,8 +384,8 @@ for(rr in region){
       if(nrow(filter(X1,Variable==varlist[i,1] & Region==rr & Indicator=="abs"))>0){
         miny <- min(filter(X1,Variable==varlist[i,1] & Region==rr)$Y) 
         plot.0 <- ggplot() + 
-          geom_line(data=filter(X1,Variable==varlist[i,1] & Region==rr & Indicator=="abs"),aes(x=Y, y = Value , color=interaction(reorder(SCENARIO,ScenarioOrder),Model),group=interaction(SCENARIO,Model)),stat="identity") +
-          geom_point(data=filter(X1,Variable==varlist[i,1] & Region==rr & Indicator=="abs"),aes(x=Y, y = Value , color=interaction(reorder(SCENARIO,ScenarioOrder),Model),shape=Model),size=3.0,fill="white") +
+          geom_line(data=filter(X1,Variable==varlist[i,1] & Region==rr & Indicator=="abs"),aes(x=Y, y = Value , color=interaction(reorder(ScenarioOrder,SCENARIO),Model),group=interaction(SCENARIO,Model)),stat="identity") +
+          geom_point(data=filter(X1,Variable==varlist[i,1] & Region==rr & Indicator=="abs"),aes(x=Y, y = Value , color=interaction(reorder(ScenarioOrder,SCENARIO),Model),shape=Model),size=3.0,fill="white") +
           MyThemeLine + scale_color_manual(values=linepalette) + scale_x_continuous(breaks=seq(miny,maxy,10)) +
           xlab("year") + ylab(varlist[i,4])  +  ggtitle(paste(rr,varlist[i,3],sep=" ")) +
           annotate("segment",x=2005,xend=maxy,y=0,yend=0,linetype="dashed",color="grey")+ 
@@ -420,14 +426,16 @@ for(rr in region){
     }
     return(XXX)
   }
-  allmodel_def <- allmodel %>% filter(Model=="Def" & NDC!="on") %>% left_join(ScenarioOrder)     
+  allmodel_def <- allmodel %>% filter(Model=="Def" & NDC!="on" & Y>=2015) %>% inner_join(ScenarioOrder)     
   allmodel_hist <- allmodel %>% filter(Model=="Reference")      
-  unloadfolder <- "png"
-  allplotcge <- plot_all(allmodel_def,allmodel_hist,unloadfolder)
-#  allmodel_def <- allmodel %>% filter(SCENARIO=="1000C" & NDC=="off") %>% left_join(ScenarioOrder)    
-#  unloadfolder <- "var"
-#  plot_all(allmodel_def,unloadfolder)
+  allplotcge <- plot_all(allmodel_def,allmodel_hist,"png")
+  allmodel_def <- allmodel %>% filter(SCENARIO=="1000C" & NDC!="on" & Y>=2015) %>% inner_join(ScenarioOrder)    
+  allplotcge_dif <- plot_all(allmodel_def,allmodel_hist,"var")
 }
+
+#---- Merge plots
+source("plotmerge.R")
+
 
 
 

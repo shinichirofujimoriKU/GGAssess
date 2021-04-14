@@ -145,3 +145,8 @@ Emi_NH3	1
 Emi_NOx	1
 Pol_Cos_GDP_Los	1
 Pol_Cos_Cns_Los	1
+Ele_rat_Ele	1
+Foo_Ene_Sup_Liv_Per_Cap	1
+Fod_Wst	1
+Cap_Cos_Ele_SolarPV	1
+Cap_Cos_Ele_Win_Ons	1

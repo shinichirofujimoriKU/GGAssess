@@ -3,5 +3,11 @@
 /prog/.Rproj.user
 
 /modeloutput/*.gdx
+/prog/*.lst
 
-.Rproj.user
+/prog/*.~gm
+
+
+/prog/*.Rproj
+/prog/*.Rhistory
+
