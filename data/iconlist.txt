@@ -1,0 +1,6 @@
+Name	x	y
+greeninvestment2.jpg	0.03	0.98
+energysupply2.jpg	0.03	0.78
+energydemand2.jpg	0.03	0.57
+foodsystem2.jpg	0.03	0.35
+integrate.png	0.03	0.17

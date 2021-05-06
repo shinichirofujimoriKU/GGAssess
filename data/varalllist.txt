@@ -1912,7 +1912,7 @@ Exp_gov	Expenditure|government	billion US$2010/yr OR local currency/yr
 Exp_hou	Expenditure|household	billion US$2010/yr OR local currency/yr
 Exp	Export	billion US$2010/yr OR local currency/yr
 Imp	Import	billion US$2010/yr OR local currency/yr
-Cap_Sto	Capital Stock	billion US$2010/yr OR local currency/yr
+Cap_Sto	Capital Stock	billion US$2010/yr
 Val_Add_ind_Ene	Value Added|industry|Energy	billion US$2010/yr OR local currency/yr
 Val_Add_ind_Man	Value Added|industry|Manufacturing	billion US$2010/yr OR local currency/yr
 Val_Add_ind_Ene_Int	Value Added|industry|Energy Intensive	billion US$2010/yr OR local currency/yr
@@ -2159,37 +2159,37 @@ Fis_Gap	Fiscal Gap	billion US$2010/yr OR local currency/yr
 Fis_Res	Fiscal Resilience	billion US$2010/yr OR local currency/yr
 Ind_Ris_GDP_Gro	Indirect Risk|GDP Growth	%
 Ind_Ris_Pub_Deb	Indirect Risk|Public Debt	billion US$2010/yr OR local currency/yr
-Cap_Cos_Ele_Bio_w_CCS	Capital Cost|Electricity|Biomass|w/ CCS	US$2010/kW OR local currency/kW
-Cap_Cos_Ele_Bio_wo_CCS	Capital Cost|Electricity|Biomass|w/o CCS	US$2010/kW OR local currency/kW
-Cap_Cos_Ele_Coa_w_CCS	Capital Cost|Electricity|Coal|w/ CCS	US$2010/kW OR local currency/kW
-Cap_Cos_Ele_Coa_wo_CCS	Capital Cost|Electricity|Coal|w/o CCS	US$2010/kW OR local currency/kW
-Cap_Cos_Ele_Gas_w_CCS	Capital Cost|Electricity|Gas|w/ CCS	US$2010/kW OR local currency/kW
-Cap_Cos_Ele_Gas_wo_CCS	Capital Cost|Electricity|Gas|w/o CCS	US$2010/kW OR local currency/kW
-Cap_Cos_Ele_Geo	Capital Cost|Electricity|Geothermal	US$2010/kW OR local currency/kW
-Cap_Cos_Ele_Hyd	Capital Cost|Electricity|Hydro	US$2010/kW OR local currency/kW
-Cap_Cos_Ele_Nuc	Capital Cost|Electricity|Nuclear	US$2010/kW OR local currency/kW
-Cap_Cos_Ele_SolarCSP	Capital Cost|Electricity|Solar|CSP	US$2010/kW OR local currency/kW
-Cap_Cos_Ele_SolarPV	Capital Cost|Electricity|Solar|PV	US$2010/kW OR local currency/kW
-Cap_Cos_Ele_Win_Off	Capital Cost|Electricity|Wind|Offshore	US$2010/kW OR local currency/kW
-Cap_Cos_Ele_Win_Ons	Capital Cost|Electricity|Wind|Onshore	US$2010/kW OR local currency/kW
-Cap_Cos_Gas_Bio_w_CCS	Capital Cost|Gases|Biomass|w/ CCS	US$2010/kW OR local currency/kW
-Cap_Cos_Gas_Bio_wo_CCS	Capital Cost|Gases|Biomass|w/o CCS	US$2010/kW OR local currency/kW
-Cap_Cos_Gas_Coa_w_CCS	Capital Cost|Gases|Coal|w/ CCS	US$2010/kW OR local currency/kW
-Cap_Cos_Gas_Coa_wo_CCS	Capital Cost|Gases|Coal|w/o CCS	US$2010/kW OR local currency/kW
-Cap_Cos_Hyd_Bio_w_CCS	Capital Cost|Hydrogen|Biomass|w/ CCS	US$2010/kW OR local currency/kW
-Cap_Cos_Hyd_Bio_wo_CCS	Capital Cost|Hydrogen|Biomass|w/o CCS	US$2010/kW OR local currency/kW
-Cap_Cos_Hyd_Coa_w_CCS	Capital Cost|Hydrogen|Coal|w/ CCS	US$2010/kW OR local currency/kW
-Cap_Cos_Hyd_Coa_wo_CCS	Capital Cost|Hydrogen|Coal|w/o CCS	US$2010/kW OR local currency/kW
-Cap_Cos_Hyd_Ele	Capital Cost|Hydrogen|Electricity	US$2010/kW OR local currency/kW
-Cap_Cos_Hyd_Gas_w_CCS	Capital Cost|Hydrogen|Gas|w/ CCS	US$2010/kW OR local currency/kW
-Cap_Cos_Hyd_Gas_wo_CCS	Capital Cost|Hydrogen|Gas|w/o CCS	US$2010/kW OR local currency/kW
-Cap_Cos_Liq_Bio_w_CCS	Capital Cost|Liquids|Biomass|w/ CCS	US$2010/kW OR local currency/kW
-Cap_Cos_Liq_Bio_wo_CCS	Capital Cost|Liquids|Biomass|w/o CCS	US$2010/kW OR local currency/kW
-Cap_Cos_Liq_Coa_w_CCS	Capital Cost|Liquids|Coal|w/ CCS	US$2010/kW OR local currency/kW
-Cap_Cos_Liq_Coa_wo_CCS	Capital Cost|Liquids|Coal|w/o CCS	US$2010/kW OR local currency/kW
-Cap_Cos_Liq_Gas_w_CCS	Capital Cost|Liquids|Gas|w/ CCS	US$2010/kW OR local currency/kW
-Cap_Cos_Liq_Gas_wo_CCS	Capital Cost|Liquids|Gas|w/o CCS	US$2010/kW OR local currency/kW
-Cap_Cos_Liq_Oil	Capital Cost|Liquids|Oil	US$2010/kW OR local currency/kW
+Cap_Cos_Ele_Bio_w_CCS	Capital Cost|Electricity|Biomass|w/ CCS	US$2010/kW
+Cap_Cos_Ele_Bio_wo_CCS	Capital Cost|Electricity|Biomass|w/o CCS	US$2010/kW
+Cap_Cos_Ele_Coa_w_CCS	Capital Cost|Electricity|Coal|w/ CCS	US$2010/kW
+Cap_Cos_Ele_Coa_wo_CCS	Capital Cost|Electricity|Coal|w/o CCS	US$2010/kW
+Cap_Cos_Ele_Gas_w_CCS	Capital Cost|Electricity|Gas|w/ CCS	US$2010/kW
+Cap_Cos_Ele_Gas_wo_CCS	Capital Cost|Electricity|Gas|w/o CCS	US$2010/kW
+Cap_Cos_Ele_Geo	Capital Cost|Electricity|Geothermal	US$2010/kW
+Cap_Cos_Ele_Hyd	Capital Cost|Electricity|Hydro	US$2010/kW
+Cap_Cos_Ele_Nuc	Capital Cost|Electricity|Nuclear	US$2010/kW
+Cap_Cos_Ele_SolarCSP	Capital Cost|Electricity|Solar|CSP	US$2010/kW
+Cap_Cos_Ele_SolarPV	Capital Cost|Electricity|Solar|PV	US$2010/kW
+Cap_Cos_Ele_Win_Off	Capital Cost|Electricity|Wind|Offshore	US$2010/kW
+Cap_Cos_Ele_Win_Ons	Capital Cost|Electricity|Wind|Onshore	US$2010/kW
+Cap_Cos_Gas_Bio_w_CCS	Capital Cost|Gases|Biomass|w/ CCS	US$2010/kW
+Cap_Cos_Gas_Bio_wo_CCS	Capital Cost|Gases|Biomass|w/o CCS	US$2010/kW
+Cap_Cos_Gas_Coa_w_CCS	Capital Cost|Gases|Coal|w/ CCS	US$2010/kW
+Cap_Cos_Gas_Coa_wo_CCS	Capital Cost|Gases|Coal|w/o CCS	US$2010/kW
+Cap_Cos_Hyd_Bio_w_CCS	Capital Cost|Hydrogen|Biomass|w/ CCS	US$2010/kW
+Cap_Cos_Hyd_Bio_wo_CCS	Capital Cost|Hydrogen|Biomass|w/o CCS	US$2010/kW
+Cap_Cos_Hyd_Coa_w_CCS	Capital Cost|Hydrogen|Coal|w/ CCS	US$2010/kW
+Cap_Cos_Hyd_Coa_wo_CCS	Capital Cost|Hydrogen|Coal|w/o CCS	US$2010/kW
+Cap_Cos_Hyd_Ele	Capital Cost|Hydrogen|Electricity	US$2010/kW
+Cap_Cos_Hyd_Gas_w_CCS	Capital Cost|Hydrogen|Gas|w/ CCS	US$2010/kW
+Cap_Cos_Hyd_Gas_wo_CCS	Capital Cost|Hydrogen|Gas|w/o CCS	US$2010/kW
+Cap_Cos_Liq_Bio_w_CCS	Capital Cost|Liquids|Biomass|w/ CCS	US$2010/kW
+Cap_Cos_Liq_Bio_wo_CCS	Capital Cost|Liquids|Biomass|w/o CCS	US$2010/kW
+Cap_Cos_Liq_Coa_w_CCS	Capital Cost|Liquids|Coal|w/ CCS	US$2010/kW
+Cap_Cos_Liq_Coa_wo_CCS	Capital Cost|Liquids|Coal|w/o CCS	US$2010/kW
+Cap_Cos_Liq_Gas_w_CCS	Capital Cost|Liquids|Gas|w/ CCS	US$2010/kW
+Cap_Cos_Liq_Gas_wo_CCS	Capital Cost|Liquids|Gas|w/o CCS	US$2010/kW
+Cap_Cos_Liq_Oil	Capital Cost|Liquids|Oil	US$2010/kW
 Eff_Ele_Bio_w_CCS	Efficiency|Electricity|Biomass|w/ CCS	%
 Eff_Ele_Bio_wo_CCS	Efficiency|Electricity|Biomass|w/o CCS	%
 Eff_Ele_Coa_w_CCS	Efficiency|Electricity|Coal|w/ CCS	%
@@ -2246,38 +2246,38 @@ Lif_Liq_Coa_wo_CCS	Lifetime|Liquids|Coal|w/o CCS	years
 Lif_Liq_Gas_w_CCS	Lifetime|Liquids|Gas|w/ CCS	years
 Lif_Liq_Gas_wo_CCS	Lifetime|Liquids|Gas|w/o CCS	years
 Lif_Liq_Oil	Lifetime|Liquids|Oil	years
-OM_Cos_Fix_Ele_Bio_w_CCS	OM Cost|Fixed|Electricity|Biomass|w/ CCS	US$2010/kW/yr OR local currency/kW/yr
-OM_Cos_Fix_Ele_Bio_wo_CCS	OM Cost|Fixed|Electricity|Biomass|w/o CCS	US$2010/kW/yr OR local currency/kW/yr
-OM_Cos_Fix_Ele_Coa_w_CCS	OM Cost|Fixed|Electricity|Coal|w/ CCS	US$2010/kW/yr OR local currency/kW/yr
-OM_Cos_Fix_Ele_Coa_wo_CCS	OM Cost|Fixed|Electricity|Coal|w/o CCS	US$2010/kW/yr OR local currency/kW/yr
-OM_Cos_Fix_Ele_Gas_w_CCS	OM Cost|Fixed|Electricity|Gas|w/ CCS	US$2010/kW/yr OR local currency/kW/yr
-OM_Cos_Fix_Ele_Gas_wo_CCS	OM Cost|Fixed|Electricity|Gas|w/o CCS	US$2010/kW/yr OR local currency/kW/yr
-OM_Cos_Fix_Ele_Hyd	OM Cost|Fixed|Electricity|Hydro	US$2010/kW/yr OR local currency/kW/yr
-OM_Cos_Fix_Ele_Nuc	OM Cost|Fixed|Electricity|Nuclear	US$2010/kW/yr OR local currency/kW/yr
-OM_Cos_Fix_Ele_Geo	OM Cost|Fixed|Electricity|Geothermal	US$2010/kW/yr OR local currency/kW/yr
-OM_Cos_Fix_Ele_SolarCSP	OM Cost|Fixed|Electricity|Solar|CSP	US$2010/kW/yr OR local currency/kW/yr
-OM_Cos_Fix_Ele_SolarPV	OM Cost|Fixed|Electricity|Solar|PV	US$2010/kW/yr OR local currency/kW/yr
-OM_Cos_Fix_Ele_Win	OM Cost|Fixed|Electricity|Wind	US$2010/kW/yr OR local currency/kW/yr
-OM_Cos_Fix_Ele_Win_Off	OM Cost|Fixed|Electricity|Wind|Offshore	US$2010/kW/yr OR local currency/kW/yr
-OM_Cos_Fix_Ele_Win_Ons	OM Cost|Fixed|Electricity|Wind|Onshore	US$2010/kW/yr OR local currency/kW/yr
-OM_Cos_Fix_Gas_Bio_w_CCS	OM Cost|Fixed|Gases|Biomass|w/ CCS	US$2010/kW/yr OR local currency/kW/yr
-OM_Cos_Fix_Gas_Bio_wo_CCS	OM Cost|Fixed|Gases|Biomass|w/o CCS	US$2010/kW/yr OR local currency/kW/yr
-OM_Cos_Fix_Gas_Coa_w_CCS	OM Cost|Fixed|Gases|Coal|w/ CCS	US$2010/kW/yr OR local currency/kW/yr
-OM_Cos_Fix_Gas_Coa_wo_CCS	OM Cost|Fixed|Gases|Coal|w/o CCS	US$2010/kW/yr OR local currency/kW/yr
-OM_Cos_Fix_Hyd_Bio_w_CCS	OM Cost|Fixed|Hydrogen|Biomass|w/ CCS	US$2010/kW/yr OR local currency/kW/yr
-OM_Cos_Fix_Hyd_Bio_wo_CCS	OM Cost|Fixed|Hydrogen|Biomass|w/o CCS	US$2010/kW/yr OR local currency/kW/yr
-OM_Cos_Fix_Hyd_Coa_w_CCS	OM Cost|Fixed|Hydrogen|Coal|w/ CCS	US$2010/kW/yr OR local currency/kW/yr
-OM_Cos_Fix_Hyd_Coa_wo_CCS	OM Cost|Fixed|Hydrogen|Coal|w/o CCS	US$2010/kW/yr OR local currency/kW/yr
-OM_Cos_Fix_Hyd_Ele	OM Cost|Fixed|Hydrogen|Electricity	US$2010/kW/yr OR local currency/kW/yr
-OM_Cos_Fix_Hyd_Gas_w_CCS	OM Cost|Fixed|Hydrogen|Gas|w/ CCS	US$2010/kW/yr OR local currency/kW/yr
-OM_Cos_Fix_Hyd_Gas_wo_CCS	OM Cost|Fixed|Hydrogen|Gas|w/o CCS	US$2010/kW/yr OR local currency/kW/yr
-OM_Cos_Fix_Liq_Bio_w_CCS	OM Cost|Fixed|Liquids|Biomass|w/ CCS	US$2010/kW/yr OR local currency/kW/yr
-OM_Cos_Fix_Liq_Bio_wo_CCS	OM Cost|Fixed|Liquids|Biomass|w/o CCS	US$2010/kW/yr OR local currency/kW/yr
-OM_Cos_Fix_Liq_Coa_w_CCS	OM Cost|Fixed|Liquids|Coal|w/ CCS	US$2010/kW/yr OR local currency/kW/yr
-OM_Cos_Fix_Liq_Coa_wo_CCS	OM Cost|Fixed|Liquids|Coal|w/o CCS	US$2010/kW/yr OR local currency/kW/yr
-OM_Cos_Fix_Liq_Gas_w_CCS	OM Cost|Fixed|Liquids|Gas|w/ CCS	US$2010/kW/yr OR local currency/kW/yr
-OM_Cos_Fix_Liq_Gas_wo_CCS	OM Cost|Fixed|Liquids|Gas|w/o CCS	US$2010/kW/yr OR local currency/kW/yr
-OM_Cos_Fix_Liq_Oil	OM Cost|Fixed|Liquids|Oil	US$2010/kW/yr OR local currency/kW/yr
+OM_Cos_Fix_Ele_Bio_w_CCS	OM Cost|Fixed|Electricity|Biomass|w/ CCS	US$2010/kW/yr/yr
+OM_Cos_Fix_Ele_Bio_wo_CCS	OM Cost|Fixed|Electricity|Biomass|w/o CCS	US$2010/kW/yr/yr
+OM_Cos_Fix_Ele_Coa_w_CCS	OM Cost|Fixed|Electricity|Coal|w/ CCS	US$2010/kW/yr/yr
+OM_Cos_Fix_Ele_Coa_wo_CCS	OM Cost|Fixed|Electricity|Coal|w/o CCS	US$2010/kW/yr/yr
+OM_Cos_Fix_Ele_Gas_w_CCS	OM Cost|Fixed|Electricity|Gas|w/ CCS	US$2010/kW/yr/yr
+OM_Cos_Fix_Ele_Gas_wo_CCS	OM Cost|Fixed|Electricity|Gas|w/o CCS	US$2010/kW/yr/yr
+OM_Cos_Fix_Ele_Hyd	OM Cost|Fixed|Electricity|Hydro	US$2010/kW/yr/yr
+OM_Cos_Fix_Ele_Nuc	OM Cost|Fixed|Electricity|Nuclear	US$2010/kW/yr/yr
+OM_Cos_Fix_Ele_Geo	OM Cost|Fixed|Electricity|Geothermal	US$2010/kW/yr/yr
+OM_Cos_Fix_Ele_SolarCSP	OM Cost|Fixed|Electricity|Solar|CSP	US$2010/kW/yr/yr
+OM_Cos_Fix_Ele_SolarPV	OM Cost|Fixed|Electricity|Solar|PV	US$2010/kW/yr/yr
+OM_Cos_Fix_Ele_Win	OM Cost|Fixed|Electricity|Wind	US$2010/kW/yr/yr
+OM_Cos_Fix_Ele_Win_Off	OM Cost|Fixed|Electricity|Wind|Offshore	US$2010/kW/yr/yr
+OM_Cos_Fix_Ele_Win_Ons	OM Cost|Fixed|Electricity|Wind|Onshore	US$2010/kW/yr/yr
+OM_Cos_Fix_Gas_Bio_w_CCS	OM Cost|Fixed|Gases|Biomass|w/ CCS	US$2010/kW/yr/yr
+OM_Cos_Fix_Gas_Bio_wo_CCS	OM Cost|Fixed|Gases|Biomass|w/o CCS	US$2010/kW/yr/yr
+OM_Cos_Fix_Gas_Coa_w_CCS	OM Cost|Fixed|Gases|Coal|w/ CCS	US$2010/kW/yr/yr
+OM_Cos_Fix_Gas_Coa_wo_CCS	OM Cost|Fixed|Gases|Coal|w/o CCS	US$2010/kW/yr/yr
+OM_Cos_Fix_Hyd_Bio_w_CCS	OM Cost|Fixed|Hydrogen|Biomass|w/ CCS	US$2010/kW/yr/yr
+OM_Cos_Fix_Hyd_Bio_wo_CCS	OM Cost|Fixed|Hydrogen|Biomass|w/o CCS	US$2010/kW/yr/yr
+OM_Cos_Fix_Hyd_Coa_w_CCS	OM Cost|Fixed|Hydrogen|Coal|w/ CCS	US$2010/kW/yr/yr
+OM_Cos_Fix_Hyd_Coa_wo_CCS	OM Cost|Fixed|Hydrogen|Coal|w/o CCS	US$2010/kW/yr/yr
+OM_Cos_Fix_Hyd_Ele	OM Cost|Fixed|Hydrogen|Electricity	US$2010/kW/yr/yr
+OM_Cos_Fix_Hyd_Gas_w_CCS	OM Cost|Fixed|Hydrogen|Gas|w/ CCS	US$2010/kW/yr/yr
+OM_Cos_Fix_Hyd_Gas_wo_CCS	OM Cost|Fixed|Hydrogen|Gas|w/o CCS	US$2010/kW/yr/yr
+OM_Cos_Fix_Liq_Bio_w_CCS	OM Cost|Fixed|Liquids|Biomass|w/ CCS	US$2010/kW/yr/yr
+OM_Cos_Fix_Liq_Bio_wo_CCS	OM Cost|Fixed|Liquids|Biomass|w/o CCS	US$2010/kW/yr/yr
+OM_Cos_Fix_Liq_Coa_w_CCS	OM Cost|Fixed|Liquids|Coal|w/ CCS	US$2010/kW/yr/yr
+OM_Cos_Fix_Liq_Coa_wo_CCS	OM Cost|Fixed|Liquids|Coal|w/o CCS	US$2010/kW/yr/yr
+OM_Cos_Fix_Liq_Gas_w_CCS	OM Cost|Fixed|Liquids|Gas|w/ CCS	US$2010/kW/yr/yr
+OM_Cos_Fix_Liq_Gas_wo_CCS	OM Cost|Fixed|Liquids|Gas|w/o CCS	US$2010/kW/yr/yr
+OM_Cos_Fix_Liq_Oil	OM Cost|Fixed|Liquids|Oil	US$2010/kW/yr/yr
 Exp_Agr	Export|Agriculture	billion US$2010/yr OR local currency/yr
 Exp_Ene	Export|Energy	billion US$2010/yr OR local currency/yr
 Exp_ind	Export|industry	billion US$2010/yr OR local currency/yr

@@ -150,3 +150,4 @@ Foo_Ene_Sup_Liv_Per_Cap	1
 Fod_Wst	1
 Cap_Cos_Ele_SolarPV	1
 Cap_Cos_Ele_Win_Ons	1
+Cap_Sto	3

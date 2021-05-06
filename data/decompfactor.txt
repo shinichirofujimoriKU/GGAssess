@@ -1,0 +1,6 @@
+decele	DecName	DecOrd
+va	Value-Added	1
+output_va	Output-per-Value-Added	2
+fd_output	Final-Demand-per-Output	3
+residual	Residual	4
+fd	Final-Demand	5

@@ -1,0 +1,7 @@
+AggSecCO2	AggSecOrd
+Agriculture	1
+Industry	2
+Transport	3
+Service	4
+Power	5
+OtherEnergySupply	6
