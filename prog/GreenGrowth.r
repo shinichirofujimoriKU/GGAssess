@@ -37,6 +37,7 @@ library(cowplot)
 library(RDCOMClient)
 library("colorspace")
 library(jpeg)
+library(png)
 library(xlsx)
 
 OrRdPal <- brewer.pal(9, "OrRd")

@@ -17,8 +17,8 @@ dec1000C_EnergySupply(ESC)_2100	Fig2i
 dec1000C_EnergyDemand(EDC)_2100	Fig2j
 dec1000C_Food(FST)_2100	Fig2k
 dec1000C_Integration(IST)_2100	Fig2l
-Region1	Fig3a
-GDPLoss_NPV_Region	Fig3b
+GDPLoss_NPV_Region	Fig3a
+Region1	Fig3b
 Intensity	Fig3c
 ShareValAdd_ind	Fig3d
 ShareValAdd_agr	Fig3e

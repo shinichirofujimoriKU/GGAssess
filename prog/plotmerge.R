@@ -123,6 +123,11 @@ ggsave(ppX6, file=paste0("../output/vector/figX6.svg"), width=10, height=4,limit
 ggsave(allplotcge_dif[["WorldTPES"]]+ggtitle(""), file=paste0("../output/4paper/figX6.1.png"), width=10, height=8,limitsize=FALSE)
 ggsave(allplotcge_dif[["WorldTPES"]]+ggtitle(""), file=paste0("../output/vector/figX6.1.svg"), width=10, height=8,limitsize=FALSE)
 
+#X6_2) Non-CO2 emissions 
+ppX62 <- plot_grid(allplotcge_dif[["WorldEmi_CH4"]],allplotcge_dif[["WorldEmi_N2O"]],ncol=2,rel_heights =c(1,1)) 
+ggsave(ppX62+ggtitle(""), file=paste0("../output/4paper/figX6.2.png"), width=10, height=4,limitsize=FALSE)
+ggsave(ppX62+ggtitle(""), file=paste0("../output/vector/figX6.2.svg"), width=10, height=4,limitsize=FALSE)
+
 #X7) Carbon prices
 ppX7 <- plot_grid(allplotcge[["WorldPrc_Car"]],allplotcge_dif[["WorldPrc_Car"]],ncol=2,rel_heights =c(1,1)) 
 ggsave(ppX7, file=paste0("../output/4paper/figX7.png"), width=10, height=4,limitsize=FALSE)
