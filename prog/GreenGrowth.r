@@ -599,19 +599,19 @@ for(sc in c("500C","1000C")){
     Decomp4fig1 <- filter(Decomp4fig,decele!="fd" & Y==yy & SCENARIO==sc)
     Decomp4fig2 <- filter(Decomp4fig,decele=="fd" & Y==yy & SCENARIO==sc)
     plot.0 <- dec_fig_func(Decomp4fig1,Decomp4fig2)+facet_grid(~ Model)
-    decfiglist.tmp <- list(plot.0)
-    names(decfiglist.tmp) <- paste0(sc,"_",yy)
-    decfiglist <- c(decfiglist,decfiglist.tmp)
+    decfiglist <- list(plot.0)
+    names(decfiglist) <- paste0(sc,"_",yy)
+    decfiglist <- c(decfiglist,decfiglist)
     for(dec in unique(scenariomap$Model)){
       Decomp4fig1 <- filter(Decomp4fig,decele!="fd" & Y==yy & SCENARIO==sc & Model==dec)
       Decomp4fig2 <- filter(Decomp4fig,decele=="fd" & Y==yy & SCENARIO==sc & Model==dec)
       plot.0 <- dec_fig_func(Decomp4fig1,Decomp4fig2)
 
-      decfiglist.tmp <- list(plot.0)
+      decfiglist <- list(plot.0)
       decfigdataList.tmp <- list(rbind(Decomp4fig1,Decomp4fig2))
-      names(decfiglist.tmp) <- paste0("dec",sc,"_",dec,"_",yy)
+      names(decfiglist) <- paste0("dec",sc,"_",dec,"_",yy)
       names(decfigdataList.tmp) <- paste0("dec",sc,"_",dec,"_",yy) 
-      FigList <- c(FigList,decfiglist.tmp)
+      FigList <- c(FigList,decfiglist)
       FigdataList <- c(FigdataList,decfigdataList.tmp)
       
     }
