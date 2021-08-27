@@ -52,8 +52,11 @@ garr1 <- list()
 for(i in 1:nrow(arrowpos)){
   garr1[[i]] <- grid::curveGrob(arrowpos[i,1], arrowpos[i,2], arrowpos[i,3], arrowpos[i,4],curvature=0, gp=gpar(fill="black"),arrow=arrow(type="closed", length=unit(3,"mm")))
 }
+xposfig1 <- c(0.25,0.25,0.45,0.25,0.45,0.25,0.45,0.65,0.65,0.65,0.65,0.65)
+panelnote <- c("Capital Formation","SolarPV cost","Wind power cost","Energy demand","Electrification rate","food consumption","Food waste")
 pp1 <- plot_grid(NULL,NULL,pp1.2,NULL,pp1.1,nrow=1,rel_widths =c(0.5,0.25,1.1,0.25,1)) +  
-  draw_plot_label(label = alphabet[1:12], size = 12,x = c(0.25,0.25,0.45,0.25,0.45,0.25,0.45,0.65,0.65,0.65,0.65,0.65), y = c(1, 0.81, 0.81,0.60,0.60,0.40,0.40,1,0.81,0.60,0.40,0.22))+
+  draw_plot_label(label = alphabet[1:12], size = 12,x = xposfig1, y = c(1, 0.81, 0.81,0.60,0.60,0.40,0.40,1,0.81,0.60,0.40,0.22))+
+  draw_plot_label(label = panelnote[1:7], size = 12,x = xposfig1+0.02, y = c(1, 0.81, 0.81,0.60,0.60,0.40,0.40))+
   draw_grob(garr1[[1]])+draw_grob(garr1[[2]])+draw_grob(garr1[[3]])+draw_grob(garr1[[4]])+
   draw_grob(garr1[[5]])+draw_grob(garr1[[6]])+draw_grob(garr1[[7]])+draw_grob(garr1[[8]])+draw_grob(garr1[[9]])+
   draw_text(c("   Green Investment (GI)","Energy Supply Change (ESC)","Energy Demand Change (EDC)","Food System Transformation (FST)","Integration of Social Transformation (IST)"), size = 15,x = c(0.00,0.00,0.00,0.00,0), hjust=-0.1,vjust=0,y = c(0.84,0.64,0.44,0.22,0.02))

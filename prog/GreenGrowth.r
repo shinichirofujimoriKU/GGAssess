@@ -283,8 +283,8 @@ plot.0 <- ggplot() +
   geom_line(data=filter(plotdata,Model=="Integration(IST)"),aes(x=Y, y = Value ), stat="identity") + scale_fill_manual(values=linepalette[c(2,3,5,6)]) + 
   theme(legend.position="bottom", text=element_text(size=12),  
         axis.text.x=element_text(angle=45, vjust=0.9, hjust=1, size = 12)) +
-  guides(fill=guide_legend(ncol=1)) + scale_x_continuous(breaks=seq(min(plodata$Y),max(plodata$Y),10)) +  ggtitle(paste(rr,"GDP loss rate differences from Default",sep=" ")) +
-  annotate("segment",x=2010,xend=max(plodata$Y),y=0,yend=0,linetype="solid",color="grey") + theme(legend.position='right')
+  guides(fill=guide_legend(ncol=1)) + scale_x_continuous(breaks=seq(min(plotdata$Y),max(plotdata$Y),10)) +  ggtitle(paste(rr,"GDP loss rate differences from Default",sep=" ")) +
+  annotate("segment",x=2010,xend=max(plotdata$Y),y=0,yend=0,linetype="solid",color="grey") + theme(legend.position='right')
 outname <- paste0(outputdir,"/main/GDP_loss.png")
 ggsave(plot.0, file=outname, dpi = 150, width=10, height=6,limitsize=FALSE)
 FigList <- c(FigList,list("GDP_loss_Dif"=plot.0))
