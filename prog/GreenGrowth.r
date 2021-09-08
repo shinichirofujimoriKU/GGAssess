@@ -110,7 +110,7 @@ FigdataList <- list() # list for figure data
 CGEload0 <- rgdx.param(paste0('../modeloutput/global_17_emf_diff.gdx'),'IAMCTemplate') 
 Getregion <- as.vector(unique(CGEload0$REMF))
 if(length(Getregion)==1){region <- Getregion}
-allmodel0 <- CGEload0 %>% rename("Value"=IAMCTemplate,"Variable"=VEMF) %>% 
+allmodel0 <- CGEload0 %>% rename("Value"=IAMCTemplate,Variable=".i3") %>% 
   left_join(scenariomap,by="SCENARIO") %>% filter(SCENARIO %in% as.vector(scenariomap[,1]) & REMF %in% region) %>% 
   select(-SCENARIO) %>% rename(Region="REMF",SCENARIO="Name",Indicator=".i5")
 
@@ -618,6 +618,25 @@ for(sc in c("500C","1000C")){
   }
 }
 
+#--- Inclusion of impact and air pollution
+plotdata <- filter(allmodel,Variable %in% c("Pol_Cos_GDP_Los_rat_NPV_3pc","Clm_Chn_Imp_GDP_los_rat_NPV_3pc_Rel_BaU")  & NDC!="on" & Indicator=="abs" & 
+                       Y==2100 & Indicator=="abs"& Model!="Reference"& Region %in% c("World","R5OECD90+EU","R5REF","R5ASIA","R5MAF","R5LAM")) %>%  spread(value=Value,key=Variable) 
+plotdata$Total <- plotdata$Pol_Cos_GDP_Los_rat_NPV_3pc+plotdata$Clm_Chn_Imp_GDP_los_rat_NPV_3pc_Rel_BaU
+plotdata1 <- gather(plotdata,key="Variable",value="Value",-Region,-Y,-Indicator,-SCENARIO,-Model,-NDC)
+#plotdata2 <- spread(plotdata1,value=Value,key=Model)
+plotdata2 <- left_join(plotdata1,filter(plotdata1,Model=="Default") %>% select(-Model) %>% rename(Value2=Value)) %>% filter(Model!="Default" & Variable=="Pol_Cos_GDP_Los_rat_NPV_3pc")
+plotdata2$STBenefit <- plotdata2$Value-plotdata2$Value2
+plotdata2.1 <- plotdata2 %>% select(-Value,-Value2,-Variable) %>%  rename(Value2=STBenefit)
+plotdata2.2 <- filter(plotdata1,Model=="Default" & Variable=="Pol_Cos_GDP_Los_rat_NPV_3pc") %>% select(-Variable,-Model) 
+plotdata2.3 <- left_join(plotdata2.1,plotdata2.2) %>% rename(STBenfit=Value2,DefaultMitCost=Value) %>% gather(key="Variable",value="Value",-Region,-Y,-Indicator,-SCENARIO,-Model,-NDC) 
+plotdata3 <- rbind(plotdata1 %>% filter(Model!="Default" & Variable!="Pol_Cos_GDP_Los_rat_NPV_3pc"),plotdata2.3)
+plotg.1 <- ggplot()+geom_bar(data=filter(plotdata3,Variable!="Total"),aes(x=SCENARIO, y = Value, fill=Variable,group=SCENARIO),stat="identity") +
+    geom_point(data=filter(plotdata3,Variable=="Total"),aes(x=SCENARIO, y = Value),shape=1,color="black",stat="identity") +
+          MyThemeLine + scale_fill_manual(values=c(linepalette[1],linepalette[3],linepalette[5]))  +
+           xlab("Sector") + ylab("GDP recovery contribution (%)")  + 
+           annotate("segment",x=0.5,xend=6.5,y=0,yend=0,linetype="dashed",color="grey")+ 
+           theme(legend.title=element_blank(),legend.position="bottom")
+plotg.2 <- plotg.1 + facet_grid(Model~Region)         
 
 #---- Merge plots
 source("plotmerge.R")
