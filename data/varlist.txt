@@ -151,3 +151,7 @@ Fod_Wst	1
 Cap_Cos_Ele_SolarPV	1
 Cap_Cos_Ele_Win_Ons	1
 Cap_Sto	3
+Pop_Mor_AP	3
+Air_Pol_Imp_GDP_los_rat	2
+Con_PM25_Pop_Wei	1
+Clm_Chn_Imp_GDP_los_rat	1

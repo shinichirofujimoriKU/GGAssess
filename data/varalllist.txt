@@ -3279,3 +3279,7 @@ Pol_Cos_GDP_Los_NPV	Policy Cost|GDP Loss|Net Present Value	billion US$2010/yr
 Pol_Cos_Cns_Los_NPV	Policy Cost|Consumption Loss|Net Present Value	billion US$2010/yr
 Pol_Cos_GDP_Los_rat_NPV	Policy Cost|GDP Loss rate|Net Present Value	%/year
 Pol_Cos_Cns_Los_rat_NPV	Policy Cost|Consumption Loss rate|Net Present Value	%/year
+Pop_Mor_AP	Number of death due to air pollution	million
+Air_Pol_Imp_GDP_los_rat	Economic value of air pollution health impacts per GDP	-
+Con_PM25_Pop_Wei	Population weighted PM2.5 concentration	micro g/m3
+Clm_Chn_Imp_GDP_los_rat	Climate Change Impact per GDP	%

@@ -107,29 +107,30 @@ FigList <- list()     # list for figure storage
 FigdataList <- list() # list for figure data
 
 #---IAMC tempalte loading and data merge
-CGEload0 <- rgdx.param(paste0('../modeloutput/global_17_emf_diff.gdx'),'IAMCTemplate') 
-Getregion <- as.vector(unique(CGEload0$REMF))
-if(length(Getregion)==1){region <- Getregion}
-allmodel0 <- CGEload0 %>% rename("Value"=IAMCTemplate,Variable=".i3") %>% 
-  left_join(scenariomap,by="SCENARIO") %>% filter(SCENARIO %in% as.vector(scenariomap[,1]) & REMF %in% region) %>% 
-  select(-SCENARIO) %>% rename(Region="REMF",SCENARIO="Name",Indicator=".i5")
 
-file.copy(paste0(fileloc,"AIMCGE/individual/IEAEB1062CGE/output/IEAEBIAMCTemplate.gdx"), paste0("../data/IEAEBIAMCTemplate.gdx"),overwrite = TRUE)
-IEAEB0 <- rgdx.param('../data/IEAEBIAMCTemplate.gdx','IAMCtemp17') %>% rename("Value"=IAMCtemp17,"Variable"=VEMF,"Y"=St,"Region"=Sr17,"SCENARIO"=SceEneMod) %>%
-  select(Region,Variable,Y,Value,SCENARIO) %>% filter(Region %in% region) %>% mutate(Model="Reference",NDC="None")
-IEAEB0$Y <- as.numeric(levels(IEAEB0$Y))[IEAEB0$Y]
-IEAEB1 <- filter(IEAEB0,Y<=2015 & Y>=1990) %>% mutate(Indicator="abs")
-
-allmodel0$Y <- as.numeric(levels(allmodel0$Y))[allmodel0$Y]
-allmodel <- rbind(allmodel0,IEAEB1)  
-
-#Decomposition results
-Decompload0 <- rgdx.param(paste0('../modeloutput/global_17_emf_diff.gdx'),'Loss_dcp_agg') 
-Decomp0 <- Decompload0 %>% rename("Value"=Loss_dcp_agg) %>% 
-  left_join(scenariomap,by="SCENARIO") %>% filter(SCENARIO %in% as.vector(scenariomap[,1]) & REMF %in% region) %>% 
-  select(-SCENARIO) %>% rename(Region="REMF",SCENARIO="Name",Indicator=".i6") %>% inner_join(decompfactor) %>% left_join(SecOrder)
-Decomp0$Y <-  as.numeric(levels(Decomp0$Y))[Decomp0$Y]
-
+  CGEload0 <- rgdx.param(paste0('../modeloutput/global_17_emf_diff.gdx'),'IAMCTemplate') 
+  Getregion <- as.vector(unique(CGEload0$REMF))
+  if(length(Getregion)==1){region <- Getregion}
+  allmodel0 <- CGEload0 %>% rename("Value"=IAMCTemplate,Variable=".i3") %>% 
+    left_join(scenariomap,by="SCENARIO") %>% filter(SCENARIO %in% as.vector(scenariomap[,1]) & REMF %in% region) %>% 
+    select(-SCENARIO) %>% rename(Region="REMF",SCENARIO="Name",Indicator=".i5")
+  
+  file.copy(paste0(fileloc,"AIMCGE/individual/IEAEB1062CGE/output/IEAEBIAMCTemplate.gdx"), paste0("../data/IEAEBIAMCTemplate.gdx"),overwrite = TRUE)
+  IEAEB0 <- rgdx.param('../data/IEAEBIAMCTemplate.gdx','IAMCtemp17') %>% rename("Value"=IAMCtemp17,"Variable"=VEMF,"Y"=St,"Region"=Sr17,"SCENARIO"=SceEneMod) %>%
+    select(Region,Variable,Y,Value,SCENARIO) %>% filter(Region %in% region) %>% mutate(Model="Reference",NDC="None")
+  IEAEB0$Y <- as.numeric(levels(IEAEB0$Y))[IEAEB0$Y]
+  IEAEB1 <- filter(IEAEB0,Y<=2015 & Y>=1990) %>% mutate(Indicator="abs")
+  
+  allmodel0$Y <- as.numeric(levels(allmodel0$Y))[allmodel0$Y]
+  allmodel <- rbind(allmodel0,IEAEB1)  
+  
+  #Decomposition results
+  Decompload0 <- rgdx.param(paste0('../modeloutput/global_17_emf_diff.gdx'),'Loss_dcp_agg') 
+  Decomp0 <- Decompload0 %>% rename("Value"=Loss_dcp_agg) %>% 
+    left_join(scenariomap,by="SCENARIO") %>% filter(SCENARIO %in% as.vector(scenariomap[,1]) & REMF %in% region) %>% 
+    select(-SCENARIO) %>% rename(Region="REMF",SCENARIO="Name",Indicator=".i6") %>% inner_join(decompfactor) %>% left_join(SecOrder)
+  Decomp0$Y <-  as.numeric(levels(Decomp0$Y))[Decomp0$Y]
+  
 #---- Main figure parts
 ##---- NPV comparison with IPCC 
 #---IAMC tempalte loading and data merge
@@ -517,6 +518,17 @@ TimeSeriesCarb <- function(Y,X,Rg){
     theme(legend.title=element_blank()) 
   return(p0)
 }
+
+TimeSeriesModel <- function(Y,X,Rg){
+  p0 <- ggplot() + 
+    geom_line(data=Y,aes(x=Y, y = Value , color=Model,group=interaction(SCENARIO,Model)),stat="identity") +
+    geom_point(data=Y,aes(x=Y, y = Value , color=Model,shape=Model),size=3.0,fill="white") +
+    MyThemeLine + scale_color_manual(values=linepalette) + scale_x_continuous(breaks=seq(miny,maxy,10)) +
+    xlab("year") + ylab(varlist$V3[varlist$V1==X])  +  ggtitle(paste(rr,varlist$V2.y[varlist$V1==X],sep=" ")) +
+    annotate("segment",x=2010,xend=maxy,y=0,yend=0,linetype="dashed",color="grey")+ 
+    theme(legend.title=element_blank()) 
+  return(p0)
+}
 dataextfunc <- function(XN,YN){
   return(allmodel %>% filter(Model %in% XN & NDC!="on" & Y>=2010 & Variable==YN & Region==Rg & Indicator=="abs") %>% inner_join(ScenarioOrder))  
 }
@@ -619,28 +631,88 @@ for(sc in c("500C","1000C")){
 }
 
 #--- Inclusion of impact and air pollution
-plotdata <- filter(allmodel,Variable %in% c("Pol_Cos_GDP_Los_rat_NPV_3pc","Clm_Chn_Imp_GDP_los_rat_NPV_3pc_Rel_BaU")  & NDC!="on" & Indicator=="abs" & 
-                       Y==2100 & Indicator=="abs"& Model!="Reference"& Region %in% c("World","R5OECD90+EU","R5REF","R5ASIA","R5MAF","R5LAM")) %>%  spread(value=Value,key=Variable) 
-plotdata$Total <- plotdata$Pol_Cos_GDP_Los_rat_NPV_3pc+plotdata$Clm_Chn_Imp_GDP_los_rat_NPV_3pc_Rel_BaU
-plotdata1 <- gather(plotdata,key="Variable",value="Value",-Region,-Y,-Indicator,-SCENARIO,-Model,-NDC)
+ScenarioTotcostOrder <- data.frame(c("500C","1000C","1400C"),c("0500","1000","1400")) 
+Factorlabel <- data.frame(c("AirPolBenefit","CCImpact","DefaultMitCost","STBenefitMitCost","Total"),c("3 Air pollution mortality change","4 Climate change impacts","1 Mitigation cost in default scenarios","2 Benefit of social transformation in mitigation cost","5 Total")) 
+names(ScenarioTotcostOrder)<- c("SCENARIO","ScenarioTotcostOrder")
+names(Factorlabel)<- c("Variable","Vlabel")
+Rg <- c("World","R5OECD90+EU","R5REF","R5ASIA","R5MAF","R5LAM")
+yearlist <- c("2030","2050","2100")
+plotdata <- filter(allmodel,Variable %in% c("Pol_Cos_GDP_Los_rat_NPV_3pc","Clm_Chn_Imp_GDP_los_rat_NPV_3pc_Rel_BaU","Air_Pol_Imp_GDP_los_rat_NPV_3pc_Rel_BaU")  & NDC!="on" & Indicator=="abs" & Indicator=="abs"& Model!="Reference"& Region %in% Rg) 
 #plotdata2 <- spread(plotdata1,value=Value,key=Model)
-plotdata2 <- left_join(plotdata1,filter(plotdata1,Model=="Default") %>% select(-Model) %>% rename(Value2=Value)) %>% filter(Model!="Default" & Variable=="Pol_Cos_GDP_Los_rat_NPV_3pc")
-plotdata2$STBenefit <- plotdata2$Value-plotdata2$Value2
-plotdata2.1 <- plotdata2 %>% select(-Value,-Value2,-Variable) %>%  rename(Value2=STBenefit)
-plotdata2.2 <- filter(plotdata1,Model=="Default" & Variable=="Pol_Cos_GDP_Los_rat_NPV_3pc") %>% select(-Variable,-Model) 
-plotdata2.3 <- left_join(plotdata2.1,plotdata2.2) %>% rename(STBenfit=Value2,DefaultMitCost=Value) %>% gather(key="Variable",value="Value",-Region,-Y,-Indicator,-SCENARIO,-Model,-NDC) 
-plotdata3 <- rbind(plotdata1 %>% filter(Model!="Default" & Variable!="Pol_Cos_GDP_Los_rat_NPV_3pc"),plotdata2.3)
-plotg.1 <- ggplot()+geom_bar(data=filter(plotdata3,Variable!="Total"),aes(x=SCENARIO, y = Value, fill=Variable,group=SCENARIO),stat="identity") +
-    geom_point(data=filter(plotdata3,Variable=="Total"),aes(x=SCENARIO, y = Value),shape=1,color="black",stat="identity") +
-          MyThemeLine + scale_fill_manual(values=c(linepalette[1],linepalette[3],linepalette[5]))  +
-           xlab("Sector") + ylab("GDP recovery contribution (%)")  + 
-           annotate("segment",x=0.5,xend=6.5,y=0,yend=0,linetype="dashed",color="grey")+ 
-           theme(legend.title=element_blank(),legend.position="bottom")
-plotg.2 <- plotg.1 + facet_grid(Model~Region)         
+plotdata1 <- left_join(plotdata,filter(plotdata,Model=="Default") %>% select(-Model) %>% rename(Value2=Value)) %>% filter(Model=="Default" & Variable=="Air_Pol_Imp_GDP_los_rat_NPV_3pc_Rel_BaU") %>% select(-Value) %>% rename(Value=Value2)
+plotdata2 <- left_join(plotdata,filter(plotdata,Model=="Default") %>% select(-Model) %>% rename(Value2=Value)) %>% filter(Model!="Default" & Variable=="Pol_Cos_GDP_Los_rat_NPV_3pc")
+plotdata2$STBenefitMitCost <- plotdata2$Value-plotdata2$Value2
+plotdata2.1 <- plotdata2 %>% select(-Value,-Value2,-Variable) %>%  rename(Value2=STBenefitMitCost)
+plotdata2.2 <- filter(plotdata,Model=="Default" & Variable=="Pol_Cos_GDP_Los_rat_NPV_3pc") %>% select(-Variable,-Model) 
+plotdata2.3 <- left_join(plotdata2.1,plotdata2.2) %>% rename(STBenefitMitCost=Value2,DefaultMitCost=Value) %>% left_join(select(plotdata1,-Model,-Variable)) %>% rename(AirPolBenefit=Value) %>% gather(key="Variable",value="Value",-Region,-Y,-Indicator,-SCENARIO,-Model,-NDC) 
+plotdata3 <- rbind(plotdata %>% filter(Model!="Default" & Variable!="Pol_Cos_GDP_Los_rat_NPV_3pc" & Variable!="Air_Pol_Imp_GDP_los_rat_NPV_3pc_Rel_BaU"),plotdata2.3) %>% filter(SCENARIO %in% ScenarioTotcostOrder$SCENARIO)
+#Get total
+plotdata4 <-plotdata3 %>%  spread(value=Value,key=Variable) %>% rename(CCImpact=Clm_Chn_Imp_GDP_los_rat_NPV_3pc_Rel_BaU)
+plotdata4$Total <- plotdata4$DefaultMitCost+plotdata4$STBenefitMitCost+plotdata4$CCImpact+plotdata4$AirPolBenefit
+plotdata5 <- gather(plotdata4,key="Variable",value="Value",-Region,-Y,-Indicator,-SCENARIO,-Model,-NDC) %>% filter(SCENARIO %in% ScenarioTotcostOrder$SCENARIO) %>% left_join(Factorlabel) %>%
+  filter(Y %in% yearlist & Model=="Integration(IST)")%>% left_join(ScenarioTotcostOrder)
+plotg.1 <-ggplot()+ 
+  geom_bar(data=filter(plotdata5,Vlabel!="5 Total"),aes(x=reorder(ScenarioTotcostOrder,SCENARIO), y = Value, fill=Vlabel,group=SCENARIO),stat="identity") +
+  geom_point(data=filter(plotdata5,Vlabel=="5 Total"),aes(x=reorder(ScenarioTotcostOrder,SCENARIO), y = Value),shape=1,color="black",stat="identity") +
+  MyThemeLine + scale_fill_manual(values=c(linepalette[3],linepalette[1],linepalette[5],linepalette[6]))  +
+  xlab("Mitigation levels expressed by carbon budgets") + ylab("Economic loss (positive) and gain (negative) (%)")  + 
+  annotate("segment",x=0.5,xend=3.5,y=0,yend=0,linetype="dashed",color="grey") + coord_flip() + 
+  theme(legend.title=element_blank(),legend.position="bottom") + guides(fill=guide_legend(nrow=2,byrow=TRUE)) + 
+  theme(strip.text = element_text(size = 6)) + facet_grid(Region~Y, scales ="free_y")         
+FigList <- c(FigList,list('AirClmAllNPV'=plotg.1))
+FigdataList <- c(FigdataList,list('AirClmAllNPV'=plotdata5))
+
+ScenarioTotcostOrder <- data.frame(c("Baseline","500C","1000C","1400C"),c("Baseline","0500","1000","1400")) 
+names(ScenarioTotcostOrder)<- c("SCENARIO","ScenarioTotcostOrder")
+Factorlabel <- data.frame(c("Pol_Cos_GDP_Los_rat","Clm_Chn_Imp_GDP_los_rat","Air_Pol_Imp_GDP_los_rat"),c("1 Climate change mitigation cost","2 Climate change impacts","3 Air pollution mortality change impacts")) 
+names(Factorlabel)<- c("Variable","Vlabel")
+yearlist <- c("2015","2020","2030","2050","2100")
+plotdata <- filter(allmodel,Variable %in% c("Pol_Cos_GDP_Los_rat","Clm_Chn_Imp_GDP_los_rat","Air_Pol_Imp_GDP_los_rat")  & NDC!="on" & Indicator=="abs"& Model!="Reference"& Region %in% Rg) 
+plotdata_air <- filter(plotdata,Variable %in% c("Air_Pol_Imp_GDP_los_rat")  & Model=="Default") %>% select(-Model) %>% mutate(Model="Integration(IST)")
+plotdata1 <- rbind(plotdata,plotdata_air) %>% filter(Y %in% yearlist & ((Model=="Integration(IST)" & SCENARIO %in% ScenarioTotcostOrder$SCENARIO) | SCENARIO=="Baseline")) %>% left_join(Factorlabel) %>% left_join(ScenarioTotcostOrder)
+plotg.1 <-ggplot()+ 
+  geom_line(data=plotdata1,aes(x=Y, y = Value, color=Vlabel,group=Variable),stat="identity") +
+  geom_point(data=plotdata1,aes(x=Y, y = Value, color=Vlabel,group=Variable),alpha=1,shape=21,size=1.0,fill="white") + 
+  MyThemeLine + scale_color_manual(values=c(linepalette[1],linepalette[5],linepalette[6]))  +
+  xlab("Year") + ylab("Economic loss (positive) and gain (negative) (%)")  + 
+  annotate("segment",x=2020,xend=2100,y=0,yend=0,linetype="dashed",color="grey") +  
+  theme(legend.title=element_blank(),legend.position="bottom") + guides(color=guide_legend(nrow=2,byrow=TRUE)) + 
+  theme(strip.text = element_text(size = 10)) + facet_grid(Region~ScenarioTotcostOrder, scales ="free_y")
+FigList <- c(FigList,list('AirClmAll'=plotg.1))
+FigdataList <- c(FigdataList,list('AirClmAll'=plotdata1))
+
+##Air pollution ralted things
+vlist <- c("Pop_Mor_AP","Air_Pol_Imp_GDP_los_rat","Con_PM25_Pop_Wei")
+for(vl in vlist){
+  yearlist <- c("2015","2020","2030","2050","2100")
+  allmodel_def <- allmodel %>% filter(Model %in% c("Default","Integration(IST)") & Y %in% yearlist & Variable %in% vl & Region %in% Rg & Indicator=="abs" & SCENARIO %in% c("Baseline",ScenarioTotcostOrder$SCENARIO) & NDC!="on") %>% inner_join(ScenarioOrder)
+  VName1 <- vl
+  plot.0 <- TimeSeriesCarb(allmodel_def,VName1,Rg)
+  plot.1 <- plot.0 + facet_grid(~Region, scales ="free_y")
+  eval(parse(text=paste0("FigList <- c(FigList,list('",vl,"'=plot.1))")))
+  eval(parse(text=paste0("FigdataList <- c(FigdataList,list('",vl,"'=allmodel_def))")))
+}
+
+for(vl in vlist){
+  yearlist <- c("2015","2020","2030","2050","2100")
+  allmodel_def <- allmodel %>% filter(Model %in% c("Default","Integration(IST)") & Y %in% yearlist & Variable %in% vl & Region %in% Rg & Indicator=="abs" & SCENARIO %in% c("1000C") & NDC!="on") %>% inner_join(ScenarioOrder)
+  VName1 <- vl
+  plot.0 <- TimeSeriesModel(allmodel_def,VName1,Rg)
+  plot.1 <- plot.0 + facet_grid(~Region, scales ="free_y")
+  eval(parse(text=paste0("FigList <- c(FigList,list('",vl,"ISTcomp'=plot.1))")))
+  eval(parse(text=paste0("FigdataList <- c(FigdataList,list('",vl,"ISTcomp'=allmodel_def))")))
+}
+
+allmodel_def <- allmodel %>% filter(Model %in% c("Default","Integration(IST)") & Y>=2010 & Variable %in% c("Clm_Chn_Imp_GDP_los_rat") & Region %in% Rg & Indicator=="abs" & SCENARIO %in% c("Baseline",ScenarioTotcostOrder$SCENARIO) & NDC!="on") %>% inner_join(ScenarioOrder)
+VName1 <- "Clm_Chn_Imp_GDP_los_rat"
+plot.0 <- TimeSeriesCarb(allmodel_def,VName1,Rg)
+plot.1 <- plot.0 + facet_wrap(~Region, ncol=3,scales ="free_y")
+eval(parse(text=paste0("FigList <- c(FigList,list('",VName1,"'=plot.1))")))
+eval(parse(text=paste0("FigdataList <- c(FigdataList,list('",VName1,"'=allmodel_def))")))
 
 #---- Merge plots
 source("plotmerge.R")
 
-
+#source("dataload.r")
 
 

@@ -94,6 +94,10 @@ write.xlsx(FigdataList[["GDPLoss_DisCount_2"]], file = "../output/data/Figure.xl
 write.xlsx(FigdataList[["NPV_regopm"]], file = "../output/data/Figure.xlsx", sheetName="Fig4d",append = FALSE, row.names=FALSE)
 write.xlsx(FigdataList[["NPV_NDC"]], file = "../output/data/Figure.xlsx", sheetName="Fig4e",append = FALSE, row.names=FALSE)
 
+#5
+ggsave(FigList[["AirClmAllNPV"]], file=paste0("../output/4paper/fig5",".png"),width=10, height=7,limitsize=FALSE)
+write.xlsx(FigdataList[["AirClmAllNPV"]], file = "../output/data/Figure.xlsx", sheetName="Fig5",append = FALSE, row.names=FALSE)
+
 #X1) literature GDP loss
 ggsave(FigList[["GDPLoss_timeseries_lit"]], file=paste0("../output/4paper/figX1.png"), width=5, height=4,limitsize=FALSE)
 ggsave(FigList[["GDPLoss_timeseries_lit"]], file=paste0("../output/vector/figX1.svg"), width=5, height=4,limitsize=FALSE)
@@ -146,4 +150,24 @@ ppX9 <- plot_grid(decfiglist[["1000C_2050"]],decfiglist[["1000C_2100"]],decfigli
   draw_plot_label(label = alphabet[1:3], size = 12,x = c(0,0,0), y = c(1, 0.67, 0.33))
 ggsave(ppX9, file=paste0("../output/4paper/figX9.png"), width=10, height=12,limitsize=FALSE)
 ggsave(ppX9, file=paste0("../output/vector/figX9.svg"), width=10, height=12,limitsize=FALSE)
+
+
+
+#X10) Air quality
+
+ppX10 <- plot_grid(FigList[["Con_PM25_Pop_Wei"]],FigList[["Pop_Mor_AP"]],FigList[["Air_Pol_Imp_GDP_los_rat"]],ncol=1,rel_heights =c(1,1)) +
+  draw_plot_label(label = alphabet[1:3], size = 12,x = c(0,0,0), y = c(1, 0.67, 0.33))
+ggsave(ppX10, file=paste0("../output/4paper/figX10.png"), width=10, height=12,limitsize=FALSE)
+ggsave(ppX10, file=paste0("../output/vector/figX10.svg"), width=10, height=12,limitsize=FALSE)
+
+ppX11 <- plot_grid(FigList[["Con_PM25_Pop_WeiISTcomp"]],FigList[["Pop_Mor_APISTcomp"]],FigList[["Air_Pol_Imp_GDP_los_ratISTcomp"]],ncol=1,rel_heights =c(1,1)) +
+  draw_plot_label(label = alphabet[1:3], size = 12,x = c(0,0,0), y = c(1, 0.67, 0.33))
+ggsave(ppX11, file=paste0("../output/4paper/figX11.png"), width=10, height=12,limitsize=FALSE)
+ggsave(ppX11, file=paste0("../output/vector/figX11.svg"), width=10, height=12,limitsize=FALSE)
+
+#X11) Climate change impacts
+ggsave(FigList[["Clm_Chn_Imp_GDP_los_rat"]], file=paste0("../output/4paper/figX12.png"), width=10, height=8,limitsize=FALSE)
+ggsave(FigList[["Clm_Chn_Imp_GDP_los_rat"]], file=paste0("../output/vector/figX12.svg"), width=10, height=8,limitsize=FALSE)
+
+ggsave(FigList[["AirClmAll"]], file=paste0("../output/4paper/figX13",".png"),width=8.5, height=8.5,limitsize=FALSE)
 
