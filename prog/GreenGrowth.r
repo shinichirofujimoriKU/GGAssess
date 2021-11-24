@@ -364,7 +364,7 @@ FigList <- c(FigList,list("ShareValAdd_agr"=plot.0))
 FigdataList <- c(FigdataList,list("ShareValAdd_agr"=plotdata))
 
 #--capital stock
-plodata <- filter(allmodel,Variable %in% c("Cap_Sto") & Model!="Reference"& Region %in% c("World","R5OECD90+EU","R5REF","R5ASIA","R5MAF","R5LAM") & Indicator=="rate" & SCENARIO %in% c("1000C") & Y>=2010 & NDC!="on" & Model %in% c("Investment(GI)"))
+plotdata <- filter(allmodel,Variable %in% c("Cap_Sto") & Model!="Reference"& Region %in% c("World","R5OECD90+EU","R5REF","R5ASIA","R5MAF","R5LAM") & Indicator=="rate" & SCENARIO %in% c("1000C") & Y>=2010 & NDC!="on" & Model %in% c("Investment(AI)"))
 plot.0 <- ggplot() + 
   geom_line(data=plotdata,aes(x=Y, y = (Value-1)*100 , color=Region, group=Region,stat="identity")) + 
   geom_point(data=plotdata,aes(x=Y, y = (Value-1)*100 , color=Region,group=Region,shape=Region),size=3,fill="white") + 
@@ -373,7 +373,7 @@ plot.0 <- ggplot() +
 outname <- paste0(outputdir,"/main/CapialStock.png")
 ggsave(plot.0, file=outname, dpi = 150, width=5, height=5,limitsize=FALSE)
 FigList <- c(FigList,list("CapialStock"=plot.0))
-FigdataList <- c(FigdataList,list("ShareValAdd_agr"=plotdata))
+FigdataList <- c(FigdataList,list("CapialStock"=plotdata))
 
 #--NDC variation
 #--2100 NPV total
@@ -572,7 +572,7 @@ FigdataList <- c(FigdataList,list("Fod_Wst_FST"=allmodel_def))
 
 #---Capital stock for GI
 VName1 <- "Cap_Sto"
-ModelList <- c("Investment(GI)","Default")
+ModelList <- c("Investment(AI)","Default")
 allmodel_def <- dataextfunc(ModelList,VName1)
 plot.0 <- TimeSeriesCarb(allmodel_def,VName1,Rg)
 FigList <- c(FigList,list("Cap_sto_GI"=plot.0))
@@ -606,6 +606,7 @@ dec_fig_func <- function(X1,X2){
   return(p0)
 }
 
+decfiglistall<-0
 for(sc in c("500C","1000C")){
   for(yy in c(2050,2100)){
     Decomp4fig1 <- filter(Decomp4fig,decele!="fd" & Y==yy & SCENARIO==sc)
@@ -613,17 +614,21 @@ for(sc in c("500C","1000C")){
     plot.0 <- dec_fig_func(Decomp4fig1,Decomp4fig2)+facet_grid(~ Model)
     decfiglist <- list(plot.0)
     names(decfiglist) <- paste0(sc,"_",yy)
-    decfiglist <- c(decfiglist,decfiglist)
+    
+    if(length(decfiglistall)==0){
+      decfiglistall <- c(decfiglist)
+    }else{
+      decfiglistall <- c(decfiglistall,decfiglist)
+    }
     for(dec in unique(scenariomap$Model)){
       Decomp4fig1 <- filter(Decomp4fig,decele!="fd" & Y==yy & SCENARIO==sc & Model==dec)
       Decomp4fig2 <- filter(Decomp4fig,decele=="fd" & Y==yy & SCENARIO==sc & Model==dec)
       plot.0 <- dec_fig_func(Decomp4fig1,Decomp4fig2)
-
-      decfiglist <- list(plot.0)
+      decfiglist2 <- list(plot.0)
       decfigdataList.tmp <- list(rbind(Decomp4fig1,Decomp4fig2))
-      names(decfiglist) <- paste0("dec",sc,"_",dec,"_",yy)
+      names(decfiglist2) <- paste0("dec",sc,"_",dec,"_",yy)
       names(decfigdataList.tmp) <- paste0("dec",sc,"_",dec,"_",yy) 
-      FigList <- c(FigList,decfiglist)
+      FigList <- c(FigList,decfiglist2)
       FigdataList <- c(FigdataList,decfigdataList.tmp)
       
     }

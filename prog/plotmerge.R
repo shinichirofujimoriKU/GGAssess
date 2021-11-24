@@ -39,7 +39,7 @@ p_legend5 <- gtable::gtable_filter(ggplotGrob(FigList[["Fod_Wst_FST"]]+guides(co
 p_legend6 <- gtable::gtable_filter(ggplotGrob(FigList[["Cap_sto_GI"]]+guides(color=FALSE) +guides(shape=guide_legend(nrow=1))+theme(legend.position="bottom")), pattern = "guide-box")
 
 pp1.1 <- plot_grid(
-  FigList[["dec1000C_Investment(GI)_2100"]]+ theme(legend.position="none"),NULL,FigList[["dec1000C_EnergySupply(ESC)_2100"]]+ theme(legend.position="none"),NULL,FigList[["dec1000C_EnergyDemand(EDC)_2100"]]+ theme(legend.position="none"),NULL,
+  FigList[["dec1000C_Investment(AI)_2100"]]+ theme(legend.position="none"),NULL,FigList[["dec1000C_EnergySupply(ESC)_2100"]]+ theme(legend.position="none"),NULL,FigList[["dec1000C_EnergyDemand(EDC)_2100"]]+ theme(legend.position="none"),NULL,
   FigList[["dec1000C_Food(FST)_2100"]]+ theme(legend.position="none"),NULL,FigList[["dec1000C_Integration(IST)_2100"]]+ theme(legend.position="none"),
   ncol=1,nrow=9,rel_heights =c(1,0.15,1,0.15,1,0.15,1,0.15,1))
 pp1.2.1 <- plot_grid(FigList[["Fin_Ene_EDC"]]+ggtitle("")+ theme(legend.position="none"),FigList[["Ele_rat_Ele_EDC"]]+ggtitle("")+theme(legend.position="none"),nrow=1)
@@ -59,7 +59,7 @@ pp1 <- plot_grid(NULL,NULL,pp1.2,NULL,pp1.1,nrow=1,rel_widths =c(0.5,0.25,1.1,0.
   draw_plot_label(label = panelnote[1:7], size = 12,hjust = 0, x = xposfig1[1:7]+0.03,fontface="plain", y = c(1, 0.81, 0.81,0.60,0.60,0.40,0.40))+
   draw_grob(garr1[[1]])+draw_grob(garr1[[2]])+draw_grob(garr1[[3]])+draw_grob(garr1[[4]])+
   draw_grob(garr1[[5]])+draw_grob(garr1[[6]])+draw_grob(garr1[[7]])+draw_grob(garr1[[8]])+draw_grob(garr1[[9]])+
-  draw_text(c("   Green Investment (GI)","Energy Supply Change (ESC)","Energy Demand Change (EDC)","Food System Transformation (FST)","Integration of Social Transformation (IST)"), size = 15,x = c(0.00,0.00,0.00,0.00,0), hjust=-0.1,vjust=0,y = c(0.84,0.64,0.44,0.22,0.02))
+  draw_text(c("   Additional Investment (AI)","Energy Supply Change (ESC)","Energy Demand Change (EDC)","Food System Transformation (FST)","Integration of Social Transformation (IST)"), size = 15,x = c(0.00,0.00,0.00,0.00,0), hjust=-0.1,vjust=0,y = c(0.84,0.64,0.44,0.22,0.02))
 
 sizex <- c(15,22,0.15)
 for(ii in iconlist$Name){
@@ -121,19 +121,22 @@ ggsave(allplotcge[["WorldTPES"]], file=paste0("../output/vector/figX4.svg"), wid
 ggsave(allplotcge[["WorldLanduse"]], file=paste0("../output/4paper/figX5.png"), width=10, height=15,limitsize=FALSE)
 ggsave(allplotcge[["WorldLanduse"]], file=paste0("../output/vector/figX5.svg"), width=10, height=15,limitsize=FALSE)
 
+ggsave(FigList[["CapialStock"]], file=paste0("../output/4paper/figX6.png"), width=10, height=15,limitsize=FALSE)
+ggsave(FigList[["CapialStock"]], file=paste0("../output/vector/figX6.svg"), width=10, height=15,limitsize=FALSE)
+
 #X6) Climate
 ppX6 <- plot_grid(allplotcge[["WorldTem_Glo_Mea"]],allplotcge_dif[["WorldTem_Glo_Mea"]],ncol=2,rel_heights =c(1,1)) 
-ggsave(ppX6, file=paste0("../output/4paper/figX6.png"), width=10, height=4,limitsize=FALSE)
-ggsave(ppX6, file=paste0("../output/vector/figX6.svg"), width=10, height=4,limitsize=FALSE)
+ggsave(ppX6, file=paste0("../output/4paper/figX9.png"), width=10, height=4,limitsize=FALSE)
+ggsave(ppX6, file=paste0("../output/vector/figX9.svg"), width=10, height=4,limitsize=FALSE)
 
 #X6_1) TPES by social transformation
-ggsave(allplotcge_dif[["WorldTPES"]]+ggtitle(""), file=paste0("../output/4paper/figX6.1.png"), width=10, height=8,limitsize=FALSE)
-ggsave(allplotcge_dif[["WorldTPES"]]+ggtitle(""), file=paste0("../output/vector/figX6.1.svg"), width=10, height=8,limitsize=FALSE)
+ggsave(allplotcge_dif[["WorldTPES"]]+ggtitle(""), file=paste0("../output/4paper/figX12.png"), width=10, height=8,limitsize=FALSE)
+ggsave(allplotcge_dif[["WorldTPES"]]+ggtitle(""), file=paste0("../output/vector/figX12.svg"), width=10, height=8,limitsize=FALSE)
 
 #X6_2) Non-CO2 emissions 
 ppX62 <- plot_grid(allplotcge_dif[["WorldEmi_CH4"]],allplotcge_dif[["WorldEmi_N2O"]],ncol=2,rel_heights =c(1,1)) 
-ggsave(ppX62+ggtitle(""), file=paste0("../output/4paper/figX6.2.png"), width=10, height=4,limitsize=FALSE)
-ggsave(ppX62+ggtitle(""), file=paste0("../output/vector/figX6.2.svg"), width=10, height=4,limitsize=FALSE)
+ggsave(ppX62+ggtitle(""), file=paste0("../output/4paper/figX8.png"), width=10, height=4,limitsize=FALSE)
+ggsave(ppX62+ggtitle(""), file=paste0("../output/vector/figX8.svg"), width=10, height=4,limitsize=FALSE)
 
 #X7) Carbon prices
 ppX7 <- plot_grid(allplotcge[["WorldPrc_Car"]],allplotcge_dif[["WorldPrc_Car"]],ncol=2,rel_heights =c(1,1)) 
@@ -146,7 +149,7 @@ ggsave(ppX8, file=paste0("../output/4paper/figX8.png"), width=10, height=4,limit
 ggsave(ppX8, file=paste0("../output/vector/figX8.svg"), width=10, height=4,limitsize=FALSE)
 
 #X9) Final energy and electricity 
-ppX9 <- plot_grid(decfiglist[["1000C_2050"]],decfiglist[["1000C_2100"]],decfiglist[["500C_2100"]],ncol=1,rel_heights =c(1,1)) +
+ppX9 <- plot_grid(decfiglistall[["1000C_2050"]],decfiglistall[["1000C_2100"]],decfiglistall[["500C_2100"]],ncol=1,rel_heights =c(1,1)) +
   draw_plot_label(label = alphabet[1:3], size = 12,x = c(0,0,0), y = c(1, 0.67, 0.33))
 ggsave(ppX9, file=paste0("../output/4paper/figX9.png"), width=10, height=12,limitsize=FALSE)
 ggsave(ppX9, file=paste0("../output/vector/figX9.svg"), width=10, height=12,limitsize=FALSE)
@@ -157,17 +160,17 @@ ggsave(ppX9, file=paste0("../output/vector/figX9.svg"), width=10, height=12,limi
 
 ppX10 <- plot_grid(FigList[["Con_PM25_Pop_Wei"]],FigList[["Pop_Mor_AP"]],FigList[["Air_Pol_Imp_GDP_los_rat"]],ncol=1,rel_heights =c(1,1)) +
   draw_plot_label(label = alphabet[1:3], size = 12,x = c(0,0,0), y = c(1, 0.67, 0.33))
-ggsave(ppX10, file=paste0("../output/4paper/figX10.png"), width=10, height=12,limitsize=FALSE)
-ggsave(ppX10, file=paste0("../output/vector/figX10.svg"), width=10, height=12,limitsize=FALSE)
+ggsave(ppX10, file=paste0("../output/4paper/figX16.png"), width=10, height=12,limitsize=FALSE)
+ggsave(ppX10, file=paste0("../output/vector/figX16.svg"), width=10, height=12,limitsize=FALSE)
 
 ppX11 <- plot_grid(FigList[["Con_PM25_Pop_WeiISTcomp"]],FigList[["Pop_Mor_APISTcomp"]],FigList[["Air_Pol_Imp_GDP_los_ratISTcomp"]],ncol=1,rel_heights =c(1,1)) +
   draw_plot_label(label = alphabet[1:3], size = 12,x = c(0,0,0), y = c(1, 0.67, 0.33))
-ggsave(ppX11, file=paste0("../output/4paper/figX11.png"), width=10, height=12,limitsize=FALSE)
-ggsave(ppX11, file=paste0("../output/vector/figX11.svg"), width=10, height=12,limitsize=FALSE)
+ggsave(ppX11, file=paste0("../output/4paper/figX17.png"), width=10, height=12,limitsize=FALSE)
+ggsave(ppX11, file=paste0("../output/vector/figX17.svg"), width=10, height=12,limitsize=FALSE)
 
 #X11) Climate change impacts
-ggsave(FigList[["Clm_Chn_Imp_GDP_los_rat"]], file=paste0("../output/4paper/figX12.png"), width=10, height=8,limitsize=FALSE)
-ggsave(FigList[["Clm_Chn_Imp_GDP_los_rat"]], file=paste0("../output/vector/figX12.svg"), width=10, height=8,limitsize=FALSE)
+ggsave(FigList[["Clm_Chn_Imp_GDP_los_rat"]], file=paste0("../output/4paper/figX14.png"), width=10, height=8,limitsize=FALSE)
+ggsave(FigList[["Clm_Chn_Imp_GDP_los_rat"]], file=paste0("../output/vector/figX14.svg"), width=10, height=8,limitsize=FALSE)
 
 ggsave(FigList[["AirClmAll"]], file=paste0("../output/4paper/figX13",".png"),width=8.5, height=8.5,limitsize=FALSE)
 

@@ -1,6 +1,7 @@
 Pol_Cos_Cns_Los_rat	1
 Fin_Ene	1
 Fin_Ene_Ele	1
+Fin_Ene_Ele_Heat	1
 Fin_Ene_Gas	1
 Fin_Ene_Ind	1
 Fin_Ene_Ind_Ele	2
