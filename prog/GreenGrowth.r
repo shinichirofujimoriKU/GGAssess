@@ -172,6 +172,7 @@ FigdataList <- c(FigdataList,list("GDPLoss_Kyotogas_1"=plotdata1))
 FigdataList <- c(FigdataList,list("GDPLoss_Kyotogas_2"=plotdata2))
 
 dataplot <- filter(left_join(allmodel,ScenarioOrder), SCENARIO=="1000C" & NDC=="off" & Region=="World" & Indicator=="abs" & Variable=="Pol_Cos_GDP_Los_rat")
+maxy <- max(dataplot$Y)
 plot.0 <- ggplot() + 
   geom_point(data=dataplot,aes(x=Y, y = Value,shape=Model,color=Model),size=1.0,fill="white") +
   geom_line(data=dataplot,aes(x=Y, y = Value,shape=Model,color=Model)) +
