@@ -332,7 +332,7 @@ plotdata <- filter(allmodel,Variable %in% c("Ene_Its","Car_Its") & Model!="Refer
   left_join(data.frame(Variable=c("Ene_Its","Car_Its"),Variable2=c("Energy Intensity","Carbon Intensity")))
 plot.0 <- ggplot() + 
   geom_line(data=plotdata,aes(x=Y, y = Value , color=Region)) + 
-  ylab("Intensity") + xlab("Year") +labs(color="")+ guides(color=guide_legend(reverse=TRUE)) + MyThemeLine +scale_color_manual(values=linepalette) +
+  ylab("kgCO2/$ or MJ/$") + xlab("Year") +labs(color="")+ guides(color=guide_legend(reverse=TRUE)) + MyThemeLine +scale_color_manual(values=linepalette) +
   theme(legend.position="bottom", text=element_text(size=12),  
         axis.text.x=element_text(angle=45, vjust=0.9, hjust=1, size = 12)) +
   facet_wrap(. ~ Variable2,scales="free")
@@ -365,7 +365,7 @@ FigList <- c(FigList,list("ShareValAdd_agr"=plot.0))
 FigdataList <- c(FigdataList,list("ShareValAdd_agr"=plotdata))
 
 #--capital stock
-plotdata <- filter(allmodel,Variable %in% c("Cap_Sto") & Model!="Reference"& Region %in% c("World","R5OECD90+EU","R5REF","R5ASIA","R5MAF","R5LAM") & Indicator=="rate" & SCENARIO %in% c("1000C") & Y>=2010 & NDC!="on" & Model %in% c("Investment(AI)"))
+plotdata <- filter(allmodel,Variable %in% c("Cap_Sto") & Model!="Reference"& Region %in% c("World","R5OECD90+EU","R5REF","R5ASIA","R5MAF","R5LAM") & Indicator=="rate" & SCENARIO %in% c("1000C") & Y>=2010 & NDC!="on" & Model %in% c("Investment(ACF)"))
 plot.0 <- ggplot() + 
   geom_line(data=plotdata,aes(x=Y, y = (Value-1)*100 , color=Region, group=Region,stat="identity")) + 
   geom_point(data=plotdata,aes(x=Y, y = (Value-1)*100 , color=Region,group=Region,shape=Region),size=3,fill="white") + 
@@ -573,7 +573,7 @@ FigdataList <- c(FigdataList,list("Fod_Wst_FST"=allmodel_def))
 
 #---Capital stock for GI
 VName1 <- "Cap_Sto"
-ModelList <- c("Investment(AI)","Default")
+ModelList <- c("Investment(ACF)","Default")
 allmodel_def <- dataextfunc(ModelList,VName1)
 plot.0 <- TimeSeriesCarb(allmodel_def,VName1,Rg)
 FigList <- c(FigList,list("Cap_sto_GI"=plot.0))

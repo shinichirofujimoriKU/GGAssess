@@ -39,7 +39,7 @@ p_legend5 <- gtable::gtable_filter(ggplotGrob(FigList[["Fod_Wst_FST"]]+guides(co
 p_legend6 <- gtable::gtable_filter(ggplotGrob(FigList[["Cap_sto_GI"]]+guides(color=FALSE) +guides(shape=guide_legend(nrow=1))+theme(legend.position="bottom")), pattern = "guide-box")
 
 pp1.1 <- plot_grid(
-  FigList[["dec1000C_Investment(AI)_2100"]]+ theme(legend.position="none"),NULL,FigList[["dec1000C_EnergySupply(ESC)_2100"]]+ theme(legend.position="none"),NULL,FigList[["dec1000C_EnergyDemand(EDC)_2100"]]+ theme(legend.position="none"),NULL,
+  FigList[["dec1000C_Investment(ACF)_2100"]]+ theme(legend.position="none"),NULL,FigList[["dec1000C_EnergySupply(ESC)_2100"]]+ theme(legend.position="none"),NULL,FigList[["dec1000C_EnergyDemand(EDC)_2100"]]+ theme(legend.position="none"),NULL,
   FigList[["dec1000C_Food(FST)_2100"]]+ theme(legend.position="none"),NULL,FigList[["dec1000C_Integration(IST)_2100"]]+ theme(legend.position="none"),
   ncol=1,nrow=9,rel_heights =c(1,0.15,1,0.15,1,0.15,1,0.15,1))
 pp1.2.1 <- plot_grid(FigList[["Fin_Ene_EDC"]]+ggtitle("")+ theme(legend.position="none"),FigList[["Ele_rat_Ele_EDC"]]+ggtitle("")+theme(legend.position="none"),nrow=1)
@@ -53,13 +53,13 @@ for(i in 1:nrow(arrowpos)){
   garr1[[i]] <- grid::curveGrob(arrowpos[i,1], arrowpos[i,2], arrowpos[i,3], arrowpos[i,4],curvature=0, gp=gpar(fill="black"),arrow=arrow(type="closed", length=unit(3,"mm")))
 }
 xposfig1 <- c(0.25,0.25,0.45,0.25,0.45,0.25,0.45,0.65,0.65,0.65,0.65,0.65)
-panelnote <- c("Capital Formation","SolarPV cost","Wind power cost","Energy demand","Electrification rate","food consumption","Food waste")
+panelnote <- c("Capital Formation","SolarPV capital cost","Wind power capital cost",paste0("Energy demand",expression("\n"),"(Total final energy consumption)"),paste0("Electrification share",expression("\n"),"in Total final energy consumption"),paste0("Livestock-based",expression("\n"),"food consumption"),"Food waste")
 pp1 <- plot_grid(NULL,NULL,pp1.2,NULL,pp1.1,nrow=1,rel_widths =c(0.5,0.25,1.1,0.25,1)) +  
   draw_plot_label(label = alphabet[1:12], size = 12,x = xposfig1, y = c(1, 0.81, 0.81,0.60,0.60,0.40,0.40,1,0.81,0.60,0.40,0.22))+
   draw_plot_label(label = panelnote[1:7], size = 12,hjust = 0, x = xposfig1[1:7]+0.03,fontface="plain", y = c(1, 0.81, 0.81,0.60,0.60,0.40,0.40))+
   draw_grob(garr1[[1]])+draw_grob(garr1[[2]])+draw_grob(garr1[[3]])+draw_grob(garr1[[4]])+
   draw_grob(garr1[[5]])+draw_grob(garr1[[6]])+draw_grob(garr1[[7]])+draw_grob(garr1[[8]])+draw_grob(garr1[[9]])+
-  draw_text(c("   Additional Investment (AI)","Energy Supply Change (ESC)","Energy Demand Change (EDC)","Food System Transformation (FST)","Integration of Social Transformation (IST)"), size = 15,x = c(0.00,0.00,0.00,0.00,0), hjust=-0.1,vjust=0,y = c(0.84,0.64,0.44,0.22,0.02))
+  draw_text(c("   Additional Capital Formation (ACF)","Energy Supply Change (ESC)","Energy Demand Change (EDC)","Food System Transformation (FST)","Integration of Social Transformation (IST)"), size = 15,x = c(0.00,0.00,0.00,0.00,0), hjust=-0.1,vjust=0,y = c(0.84,0.64,0.44,0.22,0.02))
 
 sizex <- c(15,22,0.15)
 for(ii in iconlist$Name){
@@ -145,14 +145,14 @@ ggsave(ppX7, file=paste0("../output/vector/figX7.svg"), width=10, height=4,limit
 
 #X8) NPV consumption loss 
 ppX8 <- plot_grid(FigList[["Pol_Cos_Cns_Los_rat_NPV_3pc"]]+ggtitle("")+ylab("Cumulative consumption loss rates in NPV (%)"),allplotcge_dif[["WorldPol_Cos_Cns_Los_rat"]],ncol=2,rel_heights =c(1,1)) 
-ggsave(ppX8, file=paste0("../output/4paper/figX8.png"), width=10, height=4,limitsize=FALSE)
-ggsave(ppX8, file=paste0("../output/vector/figX8.svg"), width=10, height=4,limitsize=FALSE)
+ggsave(ppX8, file=paste0("../output/4paper/figX11.png"), width=10, height=4,limitsize=FALSE)
+ggsave(ppX8, file=paste0("../output/vector/figX11.svg"), width=10, height=4,limitsize=FALSE)
 
 #X9) Final energy and electricity 
 ppX9 <- plot_grid(decfiglistall[["1000C_2050"]],decfiglistall[["1000C_2100"]],decfiglistall[["500C_2100"]],ncol=1,rel_heights =c(1,1)) +
   draw_plot_label(label = alphabet[1:3], size = 12,x = c(0,0,0), y = c(1, 0.67, 0.33))
-ggsave(ppX9, file=paste0("../output/4paper/figX9.png"), width=10, height=12,limitsize=FALSE)
-ggsave(ppX9, file=paste0("../output/vector/figX9.svg"), width=10, height=12,limitsize=FALSE)
+ggsave(ppX9, file=paste0("../output/4paper/figX10.png"), width=10, height=12,limitsize=FALSE)
+ggsave(ppX9, file=paste0("../output/vector/figX10.svg"), width=10, height=12,limitsize=FALSE)
 
 
 
