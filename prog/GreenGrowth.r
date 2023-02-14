@@ -332,7 +332,7 @@ plotdata <- filter(allmodel,Variable %in% c("Ene_Its","Car_Its") & Model!="Refer
   left_join(data.frame(Variable=c("Ene_Its","Car_Its"),Variable2=c("Energy Intensity","Carbon Intensity")))
 plot.0 <- ggplot() + 
   geom_line(data=plotdata,aes(x=Y, y = Value , color=Region)) + 
-  ylab("kgCO2/$ or MJ/$") + xlab("Year") +labs(color="")+ guides(color=guide_legend(reverse=TRUE)) + MyThemeLine +scale_color_manual(values=linepalette) +
+  ylab("kgCO2/MJ or MJ/$") + xlab("Year") +labs(color="")+ guides(color=guide_legend(reverse=TRUE)) + MyThemeLine +scale_color_manual(values=linepalette) +
   theme(legend.position="bottom", text=element_text(size=12),  
         axis.text.x=element_text(angle=45, vjust=0.9, hjust=1, size = 12)) +
   facet_wrap(. ~ Variable2,scales="free")
